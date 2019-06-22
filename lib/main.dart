@@ -3,6 +3,7 @@ import 'package:english_words/english_words.dart';
 import 'package:flutter_study/CounterDisplay.dart';
 import 'package:flutter_study/MyAppBar.dart';
 import 'package:flutter_study/MyButton.dart';
+import 'package:flutter_study/base/BaseWidget.dart';
 import 'package:flutter_study/shop/Shop.dart';
 import 'RandomWords.dart';
 /*
@@ -14,6 +15,7 @@ import 'RandomWords.dart';
  * https://github.com/GanZhiXiong/GZXTaoBaoAppFlutter
  *
  * 官网学习flutter;
+ * https://flutterchina.club/
  *
  * 在Flutter中，大多数东西都是widget，包括对齐(alignment)、填充(padding)和布局(layout)
  * Scaffold 是 Material library 中提供的一个widget, 它提供了默认的导航栏、标题和包含主屏幕widget树的body属性。widget树可以很复杂。
@@ -35,6 +37,10 @@ import 'RandomWords.dart';
  * Stack： 取代线性布局 (译者语：和Android中的LinearLayout相似)，Stack允许子 widget 堆叠， 你可以使用 Positioned 来定位他们相对于Stack的上下左右四条边的位置。Stacks是基于Web开发中的绝度定位（absolute positioning )布局模型设计的。
  * Container： Container 可让您创建矩形视觉元素。container 可以装饰为一个BoxDecoration, 如 background、一个边框、或者一个阴影。
  * Container 也可以具有边距（margins）、填充(padding)和应用于其大小的约束(constraints)。另外， Container可以使用矩阵在三维空间中对其进行变换。
+ *
+ * 基础组件的学习:
+ * Container一个拥有绘制、定位、调整大小的 widget。
+
  */
 import 'package:flutter/material.dart';
 
@@ -42,7 +48,8 @@ import 'TutorialHome.dart';
 
 void main() =>
 //    runApp(new MyApp1());
-    runApp(new ShopApp());  // 购物应用程序
+//    runApp(new ShopApp());  // 购物应用程序
+    runApp(new BaseWidget());  // 购物应用程序
 
 class ShopApp extends StatelessWidget {
 
