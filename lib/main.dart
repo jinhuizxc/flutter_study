@@ -1,9 +1,19 @@
+import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
 import 'package:flutter_study/CounterDisplay.dart';
 import 'package:flutter_study/MyAppBar.dart';
 import 'package:flutter_study/MyButton.dart';
 import 'package:flutter_study/base/BaseWidget.dart';
+import 'package:flutter_study/login/LoginPage.dart';
+import 'package:flutter_study/login/NewLoginPage.dart';
+import 'package:flutter_study/login/SharePreference.dart';
+import 'package:flutter_study/routers/application.dart';
+import 'package:flutter_study/scroll/CustomScrollView.dart';
+import 'package:flutter_study/scroll/GridView.dart';
+import 'package:flutter_study/scroll/ListViewWidget.dart';
+import 'package:flutter_study/scroll/NestedScrollView.dart';
+import 'package:flutter_study/scroll/SingleChildScrollView.dart';
 import 'package:flutter_study/shop/Shop.dart';
 import 'RandomWords.dart';
 /*
@@ -40,29 +50,61 @@ import 'RandomWords.dart';
  *
  * 基础组件的学习:
  * Container一个拥有绘制、定位、调整大小的 widget。
+ *
+ * flutter_deer
+ * https://github.com/simplezhli/flutter_deer
 
  */
 import 'package:flutter/material.dart';
 
 import 'TutorialHome.dart';
 
-void main() =>
-//    runApp(new MyApp1());
+void main() {
+  //    runApp(new MyApp1());
 //    runApp(new ShopApp());  // 购物应用程序
-    runApp(new BaseWidget());  // 购物应用程序
+//    runApp(new BaseWidget());  // 购物应用程序
+//    runApp(new ListViewWidget1());  // 滚动组件ListView
+//    runApp(new NestedScrollViewWidget());  // NestedScrollView
+//    runApp(new GridViewWidget());
+//    runApp(new MySingleChildScrollView());
+//    runApp(new CustomScrollViewWidget());
+//     runApp(new LoginPage1()); // 登录界面
+     runApp(new NewLoginPage()); // 登录界面
+
+
+//  runApp(new MaterialApp(home: new SharePrefence()));
+
+}
+
+/*class MyStudyApp extends StatelessWidget {
+
+  // 初始化路由
+  MyStudyApp()  {
+    final router = Router();
+//    Routes.configureRoutes(router);
+    Application.router = router;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return null;
+  }
+}*/
 
 class ShopApp extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return MaterialApp(
       title: 'Shopping App',
-      home: new ShoppingList(products: <Product>[
-        new Product(name: 'Eggs'),
-        new Product(name: 'Flour'),
-        new Product(name: 'Chocolate chips'),
-      ],),
+      home: new ShoppingList(
+        products: <Product>[
+          new Product(name: 'Eggs'),
+          new Product(name: 'Flour'),
+          new Product(name: 'Chocolate chips'),
+        ],
+      ),
     );
   }
 }

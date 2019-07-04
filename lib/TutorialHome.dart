@@ -4,7 +4,7 @@ class TutorialHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //Scaffold是Material中主要的布局组件.
-    return Scaffold(
+    return new Scaffold(
       appBar: AppBar(
         leading: new IconButton(
           icon: new Icon(Icons.menu),
