@@ -6,6 +6,7 @@ import 'package:flutter_study/MyAppBar.dart';
 import 'package:flutter_study/MyButton.dart';
 import 'package:flutter_study/base/BaseWidget.dart';
 import 'package:flutter_study/home/splash_page.dart';
+import 'package:flutter_study/http/http/HttpPage.dart';
 import 'package:flutter_study/login/LoginPage.dart';
 import 'package:flutter_study/login/NewLoginPage.dart';
 import 'package:flutter_study/sharedpreference/SharePreference.dart';
@@ -81,7 +82,8 @@ void main() {
 //    runApp(new MaterialApp(home: new NewLoginPage())); // TODO 登录界面
 //      runApp(OfficialApp());   // sample
 //      runApp(new MaterialApp(home: new SharePreference()));   // 数据持久化
-       runApp(new WebSocketPage());   // websocket sample
+//       runApp(new WebSocketPage());   // websocket sample
+       runApp(new HttpPage());   // http sample
 //  runApp(MyDeer());
 //  // 透明状态栏
 //  if (Platform.isAndroid) {
