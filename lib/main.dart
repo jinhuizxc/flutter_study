@@ -5,10 +5,13 @@ import 'package:flutter_study/CounterDisplay.dart';
 import 'package:flutter_study/MyAppBar.dart';
 import 'package:flutter_study/MyButton.dart';
 import 'package:flutter_study/base/BaseWidget.dart';
+import 'package:flutter_study/home/splash_page.dart';
 import 'package:flutter_study/login/LoginPage.dart';
 import 'package:flutter_study/login/NewLoginPage.dart';
 import 'package:flutter_study/login/SharePreference.dart';
+import 'package:flutter_study/res/colors.dart';
 import 'package:flutter_study/routers/application.dart';
+import 'package:flutter_study/routers/routers.dart';
 import 'package:flutter_study/scroll/CustomScrollView.dart';
 import 'package:flutter_study/scroll/GridView.dart';
 import 'package:flutter_study/scroll/ListViewWidget.dart';
@@ -16,6 +19,11 @@ import 'package:flutter_study/scroll/NestedScrollView.dart';
 import 'package:flutter_study/scroll/SingleChildScrollView.dart';
 import 'package:flutter_study/shop/Shop.dart';
 import 'RandomWords.dart';
+
+import 'dart:io';
+import 'package:flutter/services.dart';
+import 'package:fluro/fluro.dart';
+import 'package:oktoast/oktoast.dart';
 /*
  * 参考资源: 三天学会Flutter
  * https://github.com/luhenchang/flutter_study
@@ -68,12 +76,49 @@ void main() {
 //    runApp(new GridViewWidget());
 //    runApp(new MySingleChildScrollView());
 //    runApp(new CustomScrollViewWidget());
-//     runApp(new LoginPage1()); // 登录界面
-     runApp(new NewLoginPage()); // 登录界面
-
+//    runApp(new LoginPage1()); // 登录界面
+//    runApp(new MaterialApp(home: new NewLoginPage())); // TODO 登录界面
+//      runApp(OfficialApp());   // sample
+      runApp(new MaterialApp(home: new SharePreference()));   // 数据持久化
+//  runApp(MyDeer());
+//  // 透明状态栏
+//  if (Platform.isAndroid) {
+//    SystemUiOverlayStyle systemUiOverlayStyle =
+//        SystemUiOverlayStyle(statusBarColor: Colors.transparent);
+//    SystemChrome.setSystemUIOverlayStyle(systemUiOverlayStyle);
+//  }
 
 //  runApp(new MaterialApp(home: new SharePrefence()));
+}
 
+class MyDeer extends StatelessWidget {
+  MyDeer() {
+    final router = Router();
+    Routes.configureRoutes(router);
+    Application.router = router;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return OKToast(
+        child: MaterialApp(
+          title: 'Flutter Deer',
+          //debugShowCheckedModeBanner: false,
+          theme: ThemeData(
+            primaryColor: Colours.app_main,
+            scaffoldBackgroundColor: Colors.white,
+          ),
+          home: SplashPage(),
+          onGenerateRoute: Application.router.generator,
+        ),
+        backgroundColor: Colors.black54,
+        textPadding:
+            const EdgeInsets.symmetric(horizontal: 16.0, vertical: 10.0),
+        radius: 20.0,
+        position: ToastPosition.bottom,
+        dismissOtherOnShow: true);
+  }
 }
 
 /*class MyStudyApp extends StatelessWidget {

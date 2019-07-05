@@ -7,6 +7,10 @@
 import 'package:flutter/material.dart';
 import 'package:groovin_material_icons/groovin_material_icons.dart';
 
+/*
+ * 用flutter写一个精美的登录页面
+ * https://blog.csdn.net/u011272795/article/details/83043932
+ */
 class NewLoginPage extends StatefulWidget {
   @override
   _NewLoginPageState createState() => _NewLoginPageState();
