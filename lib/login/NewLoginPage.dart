@@ -10,6 +10,9 @@ import 'package:groovin_material_icons/groovin_material_icons.dart';
 /*
  * 用flutter写一个精美的登录页面
  * https://blog.csdn.net/u011272795/article/details/83043932
+ *
+ * Flutter之撸一个漂亮的登录界面的总结
+ * https://www.jianshu.com/p/0c2ba709b95e
  */
 class NewLoginPage extends StatefulWidget {
   @override

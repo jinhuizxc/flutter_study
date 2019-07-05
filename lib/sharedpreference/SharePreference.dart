@@ -78,6 +78,37 @@ import 'package:oktoast/oktoast.dart';
       );
     });
  *
+ *
+ * 关于（ Scaffold.of(context).showSnackBar(SnackBar(
+                content: Text('Have a snack!'),） 报错的一些补充：
+   见文档: https://api.flutter.dev/flutter/material/Scaffold/of.html
+
+ * Widget build(BuildContext context) {
+  return Scaffold(
+    appBar: AppBar(
+      title: Text('Demo')
+    ),
+    body: Builder(
+      // Create an inner BuildContext so that the onPressed methods
+      // can refer to the Scaffold with Scaffold.of().
+      builder: (BuildContext context) {
+        return Center(
+          child: RaisedButton(
+            child: Text('SHOW A SNACKBAR'),
+            onPressed: () {
+              Scaffold.of(context).showSnackBar(SnackBar(
+                content: Text('Have a snack!'),
+              ));
+            },
+          ),
+        );
+      },
+    ),
+  );
+}
+ *
+ *
+ *
  */
 
 class SharePreference extends StatelessWidget {

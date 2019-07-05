@@ -8,7 +8,7 @@ import 'package:flutter_study/base/BaseWidget.dart';
 import 'package:flutter_study/home/splash_page.dart';
 import 'package:flutter_study/login/LoginPage.dart';
 import 'package:flutter_study/login/NewLoginPage.dart';
-import 'package:flutter_study/login/SharePreference.dart';
+import 'package:flutter_study/sharedpreference/SharePreference.dart';
 import 'package:flutter_study/res/colors.dart';
 import 'package:flutter_study/routers/application.dart';
 import 'package:flutter_study/routers/routers.dart';
@@ -18,6 +18,7 @@ import 'package:flutter_study/scroll/ListViewWidget.dart';
 import 'package:flutter_study/scroll/NestedScrollView.dart';
 import 'package:flutter_study/scroll/SingleChildScrollView.dart';
 import 'package:flutter_study/shop/Shop.dart';
+import 'package:flutter_study/websocket/WebSocketPage.dart';
 import 'RandomWords.dart';
 
 import 'dart:io';
@@ -79,7 +80,8 @@ void main() {
 //    runApp(new LoginPage1()); // 登录界面
 //    runApp(new MaterialApp(home: new NewLoginPage())); // TODO 登录界面
 //      runApp(OfficialApp());   // sample
-      runApp(new MaterialApp(home: new SharePreference()));   // 数据持久化
+//      runApp(new MaterialApp(home: new SharePreference()));   // 数据持久化
+       runApp(new WebSocketPage());   // websocket sample
 //  runApp(MyDeer());
 //  // 透明状态栏
 //  if (Platform.isAndroid) {
