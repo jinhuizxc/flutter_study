@@ -19,6 +19,7 @@ import 'package:flutter_study/scroll/ListViewWidget.dart';
 import 'package:flutter_study/scroll/NestedScrollView.dart';
 import 'package:flutter_study/scroll/SingleChildScrollView.dart';
 import 'package:flutter_study/shop/Shop.dart';
+import 'package:flutter_study/textfield/TextFieldTest.dart';
 import 'package:flutter_study/websocket/WebSocketPage.dart';
 import 'RandomWords.dart';
 
@@ -83,7 +84,8 @@ void main() {
 //      runApp(OfficialApp());   // sample
 //      runApp(new MaterialApp(home: new SharePreference()));   // 数据持久化
 //       runApp(new WebSocketPage());   // websocket sample
-       runApp(new HttpPage());   // http sample
+//  runApp(new HttpPage()); // http sample
+  runApp(new TextFieldWidget());
 //  runApp(MyDeer());
 //  // 透明状态栏
 //  if (Platform.isAndroid) {
