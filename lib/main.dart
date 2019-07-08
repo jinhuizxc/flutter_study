@@ -6,9 +6,11 @@ import 'package:flutter_study/MyAppBar.dart';
 import 'package:flutter_study/MyButton.dart';
 import 'package:flutter_study/base/BaseWidget.dart';
 import 'package:flutter_study/home/splash_page.dart';
+import 'package:flutter_study/http/dio/DioTest.dart';
 import 'package:flutter_study/http/http/HttpPage.dart';
 import 'package:flutter_study/login/LoginPage.dart';
 import 'package:flutter_study/login/NewLoginPage.dart';
+import 'package:flutter_study/router/RouterTest.dart';
 import 'package:flutter_study/sharedpreference/SharePreference.dart';
 import 'package:flutter_study/res/colors.dart';
 import 'package:flutter_study/routers/application.dart';
@@ -64,6 +66,10 @@ import 'package:oktoast/oktoast.dart';
  *
  * flutter_deer
  * https://github.com/simplezhli/flutter_deer
+ *
+ * 学习flutter的一些记录
+ * https://github.com/LXD312569496/flutter-learing
+ *
 
  */
 import 'package:flutter/material.dart';
@@ -85,7 +91,10 @@ void main() {
 //      runApp(new MaterialApp(home: new SharePreference()));   // 数据持久化
 //       runApp(new WebSocketPage());   // websocket sample
 //  runApp(new HttpPage()); // http sample
-  runApp(new TextFieldWidget());
+//  runApp(new TextFieldWidget());
+//  runApp(new DioTest());   // dio框架测试登录;
+    runApp(new RouterTest());   // 路由跳转测试;
+
 //  runApp(MyDeer());
 //  // 透明状态栏
 //  if (Platform.isAndroid) {
