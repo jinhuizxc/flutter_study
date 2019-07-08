@@ -70,6 +70,9 @@ import 'package:oktoast/oktoast.dart';
  * 学习flutter的一些记录
  * https://github.com/LXD312569496/flutter-learing
  *
+ * Flutter知识点: Flutter与原生(Android)的交互
+ * https://www.jianshu.com/p/c5263a3d7aac(https://github.com/zhujian1989/MyArchitecture)
+ *
 
  */
 import 'package:flutter/material.dart';
@@ -92,8 +95,9 @@ void main() {
 //       runApp(new WebSocketPage());   // websocket sample
 //  runApp(new HttpPage()); // http sample
 //  runApp(new TextFieldWidget());
-//  runApp(new DioTest());   // dio框架测试登录;
-    runApp(new RouterTest());   // 路由跳转测试;
+      runApp(new DioTest());   // dio框架测试;
+//    runApp(new RouterTest());   // 路由跳转测试;
+//    runApp(new MapTest());   // TODO 高德地图插件测试;
 
 //  runApp(MyDeer());
 //  // 透明状态栏

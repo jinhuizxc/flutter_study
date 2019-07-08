@@ -22,6 +22,9 @@ import 'package:flutter_study/http/dio/login/login.dart';
  * 生成dart文件直接拷贝过去，然后在项目的根目录
  * flutter packages pub run build_runner build
  *
+ * 玩安卓Flutter版【开发中】，非常新手适合学习，代码不多、注释多
+ * https://github.com/yechaoa/wanandroid_flutter
+ *
  */
 class DioTest extends StatelessWidget{
 
