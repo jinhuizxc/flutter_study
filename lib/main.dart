@@ -5,6 +5,8 @@ import 'package:flutter_study/CounterDisplay.dart';
 import 'package:flutter_study/MyAppBar.dart';
 import 'package:flutter_study/MyButton.dart';
 import 'package:flutter_study/base/BaseWidget.dart';
+import 'package:flutter_study/finger/FingerTest.dart';
+import 'package:flutter_study/finger/services/service_locator.dart';
 import 'package:flutter_study/home/splash_page.dart';
 import 'package:flutter_study/http/dio/DioTest.dart';
 import 'package:flutter_study/http/http/HttpPage.dart';
@@ -95,9 +97,12 @@ void main() {
 //       runApp(new WebSocketPage());   // websocket sample
 //  runApp(new HttpPage()); // http sample
 //  runApp(new TextFieldWidget());
-      runApp(new DioTest());   // dio框架测试;
+//      runApp(new DioTest());   // dio框架测试;
 //    runApp(new RouterTest());   // 路由跳转测试;
 //    runApp(new MapTest());   // TODO 高德地图插件测试;
+    // TODO 指纹认证模块;
+    setupLocator();
+    runApp(new FingerTest());
 
 //  runApp(MyDeer());
 //  // 透明状态栏

@@ -74,6 +74,10 @@ dependencies:
   amap_location: ^0.2.0
 #  simple_permissions: ^0.1.9
   easy_alert: ^0.0.2
+  # 指纹认证模块
+#  local_auth: ^0.5.2+3  # androidX
+  local_auth: ^0.4.0+1
+  get_it: ^1.0.3+2
 
 dev_dependencies:
   flutter_test:
@@ -94,6 +98,7 @@ flutter:
   uses-material-design: true
 
   assets:
+    - assets/
     - assets/data/
     - assets/images/
     - assets/images/home/
