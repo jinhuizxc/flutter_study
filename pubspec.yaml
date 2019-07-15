@@ -19,6 +19,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -82,6 +84,8 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
+  # dev
   json_serializable: ^3.0.0
   build_runner: ^1.0.0
 
@@ -110,6 +114,42 @@ flutter:
     - assets/images/shop/
     - assets/images/account/
     - assets/images/statistic/
+    - assets/images/illustration_1.jpg
+    - assets/images/illustration_2.jpg
+    - assets/images/illustration_3.jpg
+    - assets/images/illustration_4.jpg
+    - assets/images/illustration_5.jpg
+    - assets/images/illustration_6.jpg
+    - assets/images/illustration_7.jpg
+    - assets/images/illustration_8.jpg
+    - assets/images/illustration_9.jpg
+    - assets/images/illustration_10.jpg
+    - assets/images/illustration_11.jpg
+    - assets/images/illustration_12.jpg
+    - assets/images/illustration_13.jpg
+    - assets/images/illustration_14.jpg
+    - assets/images/illustration_15.jpg
+    - assets/images/illustration_16.jpg
+    - assets/images/illustration_17.jpg
+    - assets/images/illustration_18.jpg
+    - assets/images/illustration_19.jpg
+    - assets/images/illustration_20.jpg
+    - assets/images/illustration_21.jpg
+    - assets/images/illustration_22.jpg
+    - assets/images/illustration_23.jpg
+    - assets/images/illustration_24.jpg
+    - assets/images/illustration_25.jpg
+    - assets/images/illustration_26.jpg
+    - assets/images/illustration_27.jpg
+    - assets/images/illustration_28.jpg
+    - assets/images/illustration_29.jpg
+    - assets/images/illustration_30.jpg
+    - assets/images/illustration_31.jpg
+    - assets/images/illustration_32.jpg
+    - assets/images/illustration_33.jpg
+    - assets/images/illustration_34.jpg
+    - assets/images/illustration_35.jpg
+
   # To add assets to your application, add an assets section, like this:
   # assets:
   #  - images/a_dot_burr.jpeg
