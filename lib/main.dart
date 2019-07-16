@@ -4,9 +4,11 @@ import 'package:english_words/english_words.dart';
 import 'package:flutter_study/CounterDisplay.dart';
 import 'package:flutter_study/MyAppBar.dart';
 import 'package:flutter_study/MyButton.dart';
+import 'package:flutter_study/base/BaseApp.dart';
 import 'package:flutter_study/base/BaseWidget.dart';
 import 'package:flutter_study/finger/FingerTest.dart';
 import 'package:flutter_study/finger/services/service_locator.dart';
+import 'package:flutter_study/flutter_study/navigation/NavigatorTest.dart';
 import 'package:flutter_study/home/splash_page.dart';
 import 'package:flutter_study/http/dio/DioTest.dart';
 import 'package:flutter_study/flutter_study/DioNewTest.dart';
@@ -83,7 +85,7 @@ import 'package:flutter/material.dart';
 import 'TutorialHome.dart';
 
 void main() {
-  //    runApp(new MyApp1());
+//      runApp(new MyApp1());
 //    runApp(new ShopApp());  // 购物应用程序
 //    runApp(new BaseWidget());  // 购物应用程序
 //    runApp(new ListViewWidget1());  // 滚动组件ListView
@@ -99,10 +101,12 @@ void main() {
 //  runApp(new HttpPage()); // http sample
 //  runApp(new TextFieldWidget());
 //      runApp(new DioTest());   // dio框架测试;
-      runApp(new DioNewTest());
+//      runApp(new DioNewTest());
+//      runApp(new BaseApp());    // TODO 程序效果入口;
 //    runApp(new RouterTest());   // 路由跳转测试;
+     runApp(new RouterTests()); // 路由跳转测试1;
 //    runApp(new MapTest());   // TODO 高德地图插件测试;
-   /* // TODO 指纹认证模块;
+  /* // TODO 指纹认证模块;
     setupLocator();
     runApp(new FingerTest());*/
 
