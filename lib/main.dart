@@ -28,6 +28,7 @@ import 'package:flutter_study/scroll/SingleChildScrollView.dart';
 import 'package:flutter_study/shop/Shop.dart';
 import 'package:flutter_study/textfield/TextFieldTest.dart';
 import 'package:flutter_study/websocket/WebSocketPage.dart';
+import 'package:flutter_study/widgets/align/Align.dart';
 import 'RandomWords.dart';
 
 import 'dart:io';
@@ -104,7 +105,7 @@ void main() {
 //      runApp(new DioNewTest());
 //      runApp(new BaseApp());    // TODO 程序效果入口;
 //    runApp(new RouterTest());   // 路由跳转测试;
-     runApp(new RouterTests()); // 路由跳转测试1;
+//     runApp(new RouterTests()); // 路由跳转测试1;
 //    runApp(new MapTest());   // TODO 高德地图插件测试;
   /* // TODO 指纹认证模块;
     setupLocator();
@@ -119,6 +120,9 @@ void main() {
 //  }
 
 //  runApp(new MaterialApp(home: new SharePrefence()));
+
+    // 对齐方式align
+    runApp(new AlignWidgetTest());
 }
 
 class MyDeer extends StatelessWidget {

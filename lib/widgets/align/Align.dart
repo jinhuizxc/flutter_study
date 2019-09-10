@@ -1,7 +1,8 @@
-# flutter_study
+import 'package:flutter/material.dart';
 
-## Align 对齐方式
-```
+/*
+ * 对齐方式align
+ */
 class AlignWidgetTest extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -63,4 +64,3 @@ class _AlignWidgetState extends State<AlignWidget> {
     );
   }
 }
-```
