@@ -9,6 +9,7 @@ import 'package:flutter_study/base/BaseWidget.dart';
 import 'package:flutter_study/finger/FingerTest.dart';
 import 'package:flutter_study/finger/services/service_locator.dart';
 import 'package:flutter_study/flutter_study/navigation/NavigatorTest.dart';
+import 'package:flutter_study/helloworld/HelloWorld.dart';
 import 'package:flutter_study/home/splash_page.dart';
 import 'package:flutter_study/http/dio/DioTest.dart';
 import 'package:flutter_study/flutter_study/DioNewTest.dart';
@@ -29,6 +30,10 @@ import 'package:flutter_study/shop/Shop.dart';
 import 'package:flutter_study/textfield/TextFieldTest.dart';
 import 'package:flutter_study/websocket/WebSocketPage.dart';
 import 'package:flutter_study/widgets/align/Align.dart';
+import 'package:flutter_study/widgets/column/ColumnWidget.dart';
+import 'package:flutter_study/widgets/container/ContainerWidget.dart';
+import 'package:flutter_study/widgets/font/FontWidget.dart';
+import 'package:flutter_study/widgets/row/RowWidget.dart';
 import 'RandomWords.dart';
 
 import 'dart:io';
@@ -121,8 +126,18 @@ void main() {
 
 //  runApp(new MaterialApp(home: new SharePrefence()));
 
+      // HelloWorld
+      runApp(HelloWorld());
     // 对齐方式align
-    runApp(new AlignWidgetTest());
+//    runApp(new AlignWidgetTest());
+      // FontWidget
+//      runApp(FontWidget());
+      // Column垂直布局组件
+//      runApp(ColumnWidget());
+      // Container组件
+//      runApp(ContainerWidget());
+      // Row水平布局组件
+//      runApp(RowWidget());
 }
 
 class MyDeer extends StatelessWidget {
