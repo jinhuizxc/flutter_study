@@ -150,6 +150,15 @@ flutter:
     - assets/images/illustration_34.jpg
     - assets/images/illustration_35.jpg
     - assets/images/cat.jpeg
+    - assets/images/1.jpeg
+    - assets/images/2.jpeg
+    - assets/images/3.jpeg
+    - assets/images/4.jpeg
+    - assets/images/5.jpeg
+    - assets/images/6.jpeg
+    - assets/images/7.jpeg
+    - assets/images/8.jpeg
+    - assets/images/9.jpeg
 
   # To add assets to your application, add an assets section, like this:
   # assets:

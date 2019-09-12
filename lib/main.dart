@@ -30,7 +30,10 @@ import 'package:flutter_study/shop/Shop.dart';
 import 'package:flutter_study/textfield/TextFieldTest.dart';
 import 'package:flutter_study/websocket/WebSocketPage.dart';
 import 'package:flutter_study/widgets/align/Align.dart';
+import 'package:flutter_study/widgets/align/AlignLayout.dart';
+import 'package:flutter_study/widgets/anim/AnimWidget.dart';
 import 'package:flutter_study/widgets/column/ColumnWidget.dart';
+import 'package:flutter_study/widgets/container/ContainerLayout.dart';
 import 'package:flutter_study/widgets/container/ContainerWidget.dart';
 import 'package:flutter_study/widgets/font/FontWidget.dart';
 import 'package:flutter_study/widgets/row/RowWidget.dart';
@@ -127,17 +130,22 @@ void main() {
 //  runApp(new MaterialApp(home: new SharePrefence()));
 
       // HelloWorld
-      runApp(HelloWorld());
+//      runApp(HelloWorld());
     // 对齐方式align
 //    runApp(new AlignWidgetTest());
+//    runApp(new AlignLayout());
       // FontWidget
 //      runApp(FontWidget());
       // Column垂直布局组件
 //      runApp(ColumnWidget());
       // Container组件
 //      runApp(ContainerWidget());
+//      runApp(ContainerLayout());
       // Row水平布局组件
 //      runApp(RowWidget());
+        // 动画
+      runApp(AnimWidget());
+
 }
 
 class MyDeer extends StatelessWidget {
