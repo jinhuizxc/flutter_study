@@ -36,6 +36,7 @@ import 'package:flutter_study/widgets/column/ColumnWidget.dart';
 import 'package:flutter_study/widgets/container/ContainerLayout.dart';
 import 'package:flutter_study/widgets/container/ContainerWidget.dart';
 import 'package:flutter_study/widgets/font/FontWidget.dart';
+import 'package:flutter_study/widgets/grid/GridWidget.dart';
 import 'package:flutter_study/widgets/row/RowWidget.dart';
 import 'RandomWords.dart';
 
@@ -144,7 +145,8 @@ void main() {
       // Row水平布局组件
 //      runApp(RowWidget());
         // 动画
-      runApp(AnimWidget());
+//      runApp(AnimWidget());
+      runApp(GridWidget());
 
 }
 
