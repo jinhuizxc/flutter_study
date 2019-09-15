@@ -32,6 +32,7 @@ import 'package:flutter_study/websocket/WebSocketPage.dart';
 import 'package:flutter_study/widgets/align/Align.dart';
 import 'package:flutter_study/widgets/align/AlignLayout.dart';
 import 'package:flutter_study/widgets/anim/AnimWidget.dart';
+import 'package:flutter_study/widgets/base/BaseWidgetStudy.dart';
 import 'package:flutter_study/widgets/column/ColumnWidget.dart';
 import 'package:flutter_study/widgets/container/ContainerLayout.dart';
 import 'package:flutter_study/widgets/container/ContainerWidget.dart';
@@ -144,9 +145,8 @@ void main() {
 //      runApp(ContainerLayout());
       // Row水平布局组件
 //      runApp(RowWidget());
-        // 动画
-//      runApp(AnimWidget());
-      runApp(GridWidget());
+        // 基础组件学习
+      runApp(BaseWidgetStudy());
 
 }
 
