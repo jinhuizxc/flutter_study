@@ -3,6 +3,7 @@ import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_study/CounterDisplay.dart';
 import 'package:flutter_study/home/splash_page.dart';
+import 'package:flutter_study/main/WidgetStudy.dart';
 import 'package:flutter_study/res/colors.dart';
 import 'package:flutter_study/routers/application.dart';
 import 'package:flutter_study/routers/routers.dart';
@@ -62,8 +63,8 @@ void main() {
 //      runApp(ContainerLayout());
       // Row水平布局组件
 //      runApp(RowWidget());
-        // 基础组件学习
-      runApp(BaseWidgetStudy());
+        // 组件学习
+      runApp(WidgetStudy());
 
 }
 
