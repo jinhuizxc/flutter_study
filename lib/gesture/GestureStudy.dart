@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_study/gesture/gesturedetector/GestureDetectorWidget.dart';
+import 'package:flutter_study/gesture/slidedelete/SlideDeleteWidget.dart';
 import 'package:flutter_study/material_design/dialog/alertdialog/AlertDialogWidget.dart';
 import 'package:flutter_study/material_design/dialog/alertdialog/SimpleDialogWidget.dart';
 
-class MaterialDesignStudy extends StatelessWidget {
+/*
+ * 手势组件学习
+ */
+class GestureStudy extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'MaterialDesign风格组件',
+      title: '手势组件学习',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -19,16 +24,15 @@ class Main extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<Widget> list = [
-      // AlertDialog对话框组件
-      AlertDialogWidget(),
-      // SimpleDialog组件示例
-      SimpleDialogWidget(),
+      // 滑动删除
+      SlideDeleteWidget(),
+      GestureDetectorWidget(),
 
     ];
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('MaterialDesign风格组件'),
+        title: Text('手势组件学习'),
       ),
       // ListView学习
       body: ListView(

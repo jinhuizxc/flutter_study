@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_study/gesture/GestureStudy.dart';
 import 'package:flutter_study/material_design/MaterialDesignStudy.dart';
 import 'package:flutter_study/widgets/base/BaseWidgetStudy.dart';
 
@@ -31,6 +32,9 @@ class Main extends StatelessWidget {
       BaseWidgetStudy(),
       // MaterialDesign学习
       MaterialDesignStudy(),
+      // 手势组件
+      GestureStudy(),
+
     ];
 
     return Scaffold(
