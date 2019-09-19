@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_study/material_design/dialog/alertdialog/AlertDialogWidget.dart';
 import 'package:flutter_study/material_design/dialog/alertdialog/SimpleDialogWidget.dart';
+import 'package:flutter_study/material_design/snackbar/SnackBarPage.dart';
+import 'package:flutter_study/material_design/textfield/TextFieldWidget.dart';
+
+import 'bottomnavigationbar/BottomNavigationBarWidget.dart';
 
 class MaterialDesignStudy extends StatelessWidget {
   @override
@@ -23,6 +27,14 @@ class Main extends StatelessWidget {
       AlertDialogWidget(),
       // SimpleDialog组件示例
       SimpleDialogWidget(),
+      // TextFieldWidget
+      TextFieldWidget(),
+      // BottomNavigationBarWidget学习
+      BottomNavigationBarWidget(),
+      // SnackBar轻量提示组件
+      SnackBarWidget(),
+      // FloatingActionButton示例
+      FloatingActionButtonWidget()
 
     ];
 
