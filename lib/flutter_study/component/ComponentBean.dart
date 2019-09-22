@@ -32,7 +32,7 @@ import 'package:flutter_study/flutter_study/refresh/RefreshPage.dart';
 import 'package:flutter_study/flutter_study/swiper/SwiperPage.dart';
 import 'package:flutter_study/material_design/behavior/BehaviorPage.dart';
 import 'package:flutter_study/material_design/bottomsheet/BottomSheetPage.dart';
-import 'package:flutter_study/material_design/snackbar/SnackBarPage.dart';
+import 'package:flutter_study/material_design/snackbar/SnackBarWidget.dart';
 
 /*
  * 组件bean

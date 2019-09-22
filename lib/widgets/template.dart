@@ -7,10 +7,10 @@ class Template extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: '模板',
+      title: '组件',
       home: Scaffold(
         appBar: AppBar(
-          title: Text('模板'),
+          title: Text('组件'),
         ),
         body: Center(),
       ),

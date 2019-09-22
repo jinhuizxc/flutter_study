@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_study/material_design/dialog/alertdialog/AlertDialogWidget.dart';
 import 'package:flutter_study/material_design/dialog/alertdialog/SimpleDialogWidget.dart';
 import 'package:flutter_study/material_design/floatactionbutton/FloatingActionButtonWidget.dart';
-import 'package:flutter_study/material_design/snackbar/SnackBarPage.dart';
+import 'package:flutter_study/material_design/snackbar/SnackBarWidget.dart';
+import 'package:flutter_study/material_design/snackbar/SnackBarWidget1.dart';
 import 'package:flutter_study/material_design/textfield/TextFieldWidget.dart';
 
 import 'bottomnavigationbar/BottomNavigationBarWidget.dart';
@@ -34,6 +35,7 @@ class Main extends StatelessWidget {
       BottomNavigationBarWidget(),
       // SnackBar轻量提示组件
       SnackBarWidget(),
+      SnackBarWidget1(),
       // FloatingActionButton示例
       FloatingActionButtonWidget()
 

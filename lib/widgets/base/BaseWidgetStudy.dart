@@ -12,6 +12,7 @@ import 'package:flutter_study/widgets/gridView/GridWidget1.dart';
 import 'package:flutter_study/widgets/icon/IconWidget.dart';
 import 'package:flutter_study/widgets/image/ImageWidget.dart';
 import 'package:flutter_study/widgets/listview/ListTest.dart';
+import 'package:flutter_study/widgets/sliverappbar/SliverAppBarWidget.dart';
 import 'package:flutter_study/widgets/text/TextWidget.dart';
 
 class BaseWidgetStudy extends StatelessWidget {
@@ -32,6 +33,8 @@ class Main extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<Widget> list = [
+      // SliverAppBar-Sliver应用栏
+      SliverAppBarWidget(),
       // 可折叠组件
       FlexibleSpaceBarWidget(),
       // 水平列表示例
