@@ -5,6 +5,7 @@ import 'package:flutter_study/widgets/anim/AnimWidget.dart';
 import 'package:flutter_study/widgets/button/icon_button/IconButtonWidget.dart';
 import 'package:flutter_study/widgets/container/ContainerWidget.dart';
 import 'package:flutter_study/widgets/container/Horizontal.dart';
+import 'package:flutter_study/widgets/flexiblespacebar/FlexiableSpaceBarWidget.dart';
 import 'package:flutter_study/widgets/formdata/FormDataWidget.dart';
 import 'package:flutter_study/widgets/gridView/GridWidget.dart';
 import 'package:flutter_study/widgets/gridView/GridWidget1.dart';
@@ -31,6 +32,8 @@ class Main extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<Widget> list = [
+      // 可折叠组件
+      FlexibleSpaceBarWidget(),
       // 水平列表示例
       HorizontalWidget(),
       // 容器组件
