@@ -7,6 +7,7 @@ import 'package:flutter_study/material_design/snackbar/SnackBarWidget1.dart';
 import 'package:flutter_study/material_design/textfield/TextFieldWidget.dart';
 
 import 'bottomnavigationbar/BottomNavigationBarWidget.dart';
+import 'flatbutton/FlatButtonWidget.dart';
 
 class MaterialDesignStudy extends StatelessWidget {
   @override
@@ -25,6 +26,8 @@ class Main extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<Widget> list = [
+      // FlatButton组件
+      FlatButtonWidget(),
       // AlertDialog对话框组件
       AlertDialogWidget(),
       // SimpleDialog组件示例
@@ -38,7 +41,6 @@ class Main extends StatelessWidget {
       SnackBarWidget1(),
       // FloatingActionButton示例
       FloatingActionButtonWidget()
-
     ];
 
     return Scaffold(
@@ -61,4 +63,3 @@ class Main extends StatelessWidget {
     );
   }
 }
-
