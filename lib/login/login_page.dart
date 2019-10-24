@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flustars/flustars.dart' as FlutterStars;
 import 'package:flutter_study/common/common.dart';
 
 // 登录界面
@@ -25,7 +24,6 @@ class _LoginState extends State<Login> {
     //监听输入改变
     _nameController.addListener(_verify);
     _passwordController.addListener(_verify);
-    _nameController.text = FlutterStars.SpUtil.getString(Constant.phone);
   }
   @override
   Widget build(BuildContext context) {

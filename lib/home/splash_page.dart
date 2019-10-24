@@ -7,7 +7,6 @@ import 'package:flutter_study/utils/utils.dart';
 import 'dart:async';
 import 'package:rxdart/rxdart.dart';
 import 'package:flukit/flukit.dart';
-import 'package:flustars/flustars.dart';
 
 class SplashPage extends StatefulWidget {
   @override
@@ -90,21 +89,9 @@ class _SplashPageState extends State<SplashPage> {
   void _initSplash() {
     _subscription =
         Observable.just(1).delay(Duration(milliseconds: 2000)).listen((_) {
-      _initAsync();
     });
   }
 
-  void _initAsync() async {
-    await SpUtil.getInstance();
-    if (SpUtil.getBool(Constant.key_guide, defValue: true)) {
-      SpUtil.putBool(Constant.key_guide, false);
-      _initGuide();
-      print("初始化 0"); // 第1次执行这里
-    } else {
-      _goLogin();
-      print("初始化 1"); // 第2次执行这里;
-    }
-  }
 
   void _initGuide() {
     setState(() {

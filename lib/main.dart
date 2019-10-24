@@ -8,7 +8,6 @@ import 'package:flutter_study/res/colors.dart';
 import 'package:flutter_study/routers/application.dart';
 import 'package:flutter_study/routers/routers.dart';
 import 'package:flutter_study/shop/Shop.dart';
-import 'package:flutter_study/widgets/base/BaseWidgetStudy.dart';
 import 'package:oktoast/oktoast.dart';
 
 import 'RandomWords.dart';
