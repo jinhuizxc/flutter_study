@@ -1,4 +1,4 @@
-import 'package:english_words/english_words.dart';
+
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_study/CounterDisplay.dart';
@@ -152,7 +152,7 @@ class MyApp extends StatelessWidget {
   // 热重载每次都会执行build()方法
   @override
   Widget build(BuildContext context) {
-    final wordPair = new WordPair.random();
+//    final wordPair = new WordPair.random();
 
     return new MaterialApp(
       /*title: 'Welcome to Flutter',

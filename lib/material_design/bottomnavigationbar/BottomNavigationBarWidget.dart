@@ -23,6 +23,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+
   //当前选中项的索引
   int _currentIndex = 1;
 
