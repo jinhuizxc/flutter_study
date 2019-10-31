@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_study/sample/LayoutTest.dart';
 import 'package:flutter_study/scroll/ListViewWidget.dart';
 import 'package:flutter_study/widgets/Expanded/ExpandedWidget.dart';
 import 'package:flutter_study/widgets/anim/AnimWidget.dart';
@@ -33,6 +34,8 @@ class Main extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<Widget> list = [
+      // 基础布局
+      LayoutTest(),
       // SliverAppBar-Sliver应用栏
       SliverAppBarWidget(),
       // 可折叠组件
