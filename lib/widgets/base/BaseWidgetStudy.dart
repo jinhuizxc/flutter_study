@@ -1,5 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_study/router/NavigatorTest1.dart';
+import 'package:flutter_study/router/NavigatorTest2.dart';
+import 'package:flutter_study/router/NavigatorTest3.dart';
+import 'package:flutter_study/router/NavigatorTest4.dart';
+import 'package:flutter_study/router/NavigatorTest5.dart';
 import 'package:flutter_study/sample/LayoutTest.dart';
+import 'package:flutter_study/router/NavigatorTest.dart';
 import 'package:flutter_study/scroll/ListViewWidget.dart';
 import 'package:flutter_study/widgets/Expanded/ExpandedWidget.dart';
 import 'package:flutter_study/widgets/anim/AnimWidget.dart';
@@ -36,6 +42,13 @@ class Main extends StatelessWidget {
     List<Widget> list = [
       // 基础布局
       LayoutTest(),
+      // 路由和导航
+      NavigatorTest(),
+      NavigatorTest1(),
+      NavigatorTest2(),
+      NavigatorTest3(),
+      NavigatorTest4(),
+      NavigatorTest5(),
       // SliverAppBar-Sliver应用栏
       SliverAppBarWidget(),
       // 可折叠组件
