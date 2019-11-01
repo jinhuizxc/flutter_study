@@ -11,8 +11,8 @@ class NavigatorTest2 extends StatelessWidget {
       todos: List.generate(
         20,
         (i) => Todo(
-          'Todo $i',
-          'A description of what needs to be done for Todo $i',
+          'Todo $i', // 标题
+          'A description of what needs to be done for Todo $i', // 描述
         ),
       ),
     );
@@ -24,6 +24,8 @@ class TodosScreen extends StatelessWidget {
   final List<Todo> todos;
 
   TodosScreen({Key key, @required this.todos}) : super(key: key);
+
+  //  TodosScreen({Key key, @required this.todos}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
