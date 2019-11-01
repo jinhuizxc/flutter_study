@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_study/sample/favorite.dart';
 
 /*
  * 在Flutter中构建布局
@@ -59,11 +60,15 @@ class LayoutTest extends StatelessWidget {
               ],
             ),
           ),
-          new Icon(
-            Icons.star,
-            color: Colors.red[500],
-          ),
-          new Text('41'),
+          // 无状态的widget
+//          new Icon(
+//            Icons.star,
+//            color: Colors.red[500],
+//          ),
+//          new Text('41'),
+        // 将有 stateful widget 插入 widget 树中
+          FavoriteWidget(),
+
         ],
       ),
     );
@@ -92,12 +97,7 @@ Lake Oeschinen lies at the foot of the Blüemlisalp in the Bernese Alps. Situate
       ),
     );
 
-    return new MaterialApp(
-      title: '在Flutter中构建布局',
-      theme: new ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: Scaffold(
+    return Scaffold(
         appBar: AppBar(
           title: Text('在Flutter中构建布局'),
         ),
@@ -114,7 +114,6 @@ Lake Oeschinen lies at the foot of the Blüemlisalp in the Bernese Alps. Situate
             textSection,
           ],
         ),
-      ),
-    );
+      );
   }
 }

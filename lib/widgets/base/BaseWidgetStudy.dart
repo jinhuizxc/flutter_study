@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_study/sample/LayoutTest.dart';
+import 'package:flutter_study/flutter_study/component/InkWellTest.dart';
+import 'package:flutter_study/flutter_study/router/NavigatorTest.dart';
+import 'package:flutter_study/flutter_study/router/NavigatorTest1.dart';
+import 'package:flutter_study/flutter_study/router/NavigatorTest2.dart';
+import 'package:flutter_study/flutter_study/router/NavigatorTest3.dart';
+import 'package:flutter_study/flutter_study/router/NavigatorTest4.dart';
+import 'package:flutter_study/flutter_study/router/NavigatorTest5.dart';
+import 'package:flutter_study/flutter_study/state/tapbox_a.dart';
+import 'package:flutter_study/flutter_study/state/tapbox_b.dart';
+import 'package:flutter_study/flutter_study/state/tapbox_c.dart';
+import 'package:flutter_study/sample/layout_test.dart';
 import 'package:flutter_study/scroll/ListViewWidget.dart';
-import 'package:flutter_study/study/router/NavigatorTest.dart';
-import 'package:flutter_study/study/router/NavigatorTest1.dart';
-import 'package:flutter_study/study/router/NavigatorTest2.dart';
-import 'package:flutter_study/study/router/NavigatorTest3.dart';
-import 'package:flutter_study/study/router/NavigatorTest4.dart';
-import 'package:flutter_study/study/router/NavigatorTest5.dart';
 import 'package:flutter_study/widgets/Expanded/ExpandedWidget.dart';
 import 'package:flutter_study/widgets/anim/AnimWidget.dart';
 import 'package:flutter_study/widgets/button/icon_button/IconButtonWidget.dart';
@@ -40,6 +44,14 @@ class Main extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<Widget> list = [
+      // widget管理自己的状态
+      TapboxATest(),
+      // 父widget管理widget的state
+      ParentWidgetTest(),
+      // 混搭管理
+      ParentWidgetTest1(),
+      // InkWell测试
+      InkWellTest(),
       // 基础布局
       LayoutTest(),
       // 路由和导航
