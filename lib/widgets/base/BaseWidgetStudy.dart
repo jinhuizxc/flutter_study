@@ -1,17 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_study/flutter_study/component/InkWellTest.dart';
-import 'package:flutter_study/flutter_study/router/NavigatorTest.dart';
-import 'package:flutter_study/flutter_study/router/NavigatorTest1.dart';
-import 'package:flutter_study/flutter_study/router/NavigatorTest2.dart';
-import 'package:flutter_study/flutter_study/router/NavigatorTest3.dart';
-import 'package:flutter_study/flutter_study/router/NavigatorTest4.dart';
-import 'package:flutter_study/flutter_study/router/NavigatorTest5.dart';
+import 'package:flutter_study/flutter_study/router/router_study.dart';
+import 'package:flutter_study/flutter_study/stack/stack_study.dart';
 import 'package:flutter_study/flutter_study/state/tapbox_a.dart';
 import 'package:flutter_study/flutter_study/state/tapbox_b.dart';
 import 'package:flutter_study/flutter_study/state/tapbox_c.dart';
 import 'package:flutter_study/sample/layout_test.dart';
 import 'package:flutter_study/scroll/ListViewWidget.dart';
 import 'package:flutter_study/widgets/Expanded/ExpandedWidget.dart';
+import 'package:flutter_study/widgets/align/AlignLayout.dart';
 import 'package:flutter_study/widgets/anim/AnimWidget.dart';
 import 'package:flutter_study/widgets/button/icon_button/IconButtonWidget.dart';
 import 'package:flutter_study/widgets/container/ContainerWidget.dart';
@@ -36,7 +33,6 @@ class BaseWidgetStudy extends StatelessWidget {
       ),
       home: Main(),
     );
-    ;
   }
 }
 
@@ -44,6 +40,12 @@ class Main extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<Widget> list = [
+      // Align对齐布局示例
+      AlignLayout(),
+      // StackStudy
+      StackStudy(),
+      // 路由和导航
+      RouterStudy(),
       // widget管理自己的状态
       TapboxATest(),
       // 父widget管理widget的state
@@ -54,13 +56,6 @@ class Main extends StatelessWidget {
       InkWellTest(),
       // 基础布局
       LayoutTest(),
-      // 路由和导航
-      NavigatorTest(),
-      NavigatorTest1(),
-      NavigatorTest2(),
-      NavigatorTest3(),
-      NavigatorTest4(),
-      NavigatorTest5(),
       // SliverAppBar-Sliver应用栏
       SliverAppBarWidget(),
       // 可折叠组件

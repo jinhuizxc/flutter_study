@@ -1,5 +1,19 @@
 # flutter_study
+# 环境搭建
+https://www.jianshu.com/p/35326ec8090f
+# 开发文档
+https://flutter.cn/docs
+# Flutter->JSON解析
+https://segmentfault.com/a/1190000020134951
+# Flutter页面布局 Stack层叠组件 Stack与Align Stack与Positioned实现定位布局
+https://www.cnblogs.com/yiweiyihang/p/11451966.html
+# Flutter Codelabs
+https://codelabs.flutter-io.cn/#codelabs
+# Flutter 常用工具类库common_utils
+http://www.imooc.com/article/details/id/253896
 
+
+---
 ## Align 对齐方式
 ```
 class AlignWidgetTest extends StatelessWidget {
