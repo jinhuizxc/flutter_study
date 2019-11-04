@@ -5,6 +5,7 @@ import 'package:flutter_study/flutter_study/stack/stack_study.dart';
 import 'package:flutter_study/flutter_study/state/tapbox_a.dart';
 import 'package:flutter_study/flutter_study/state/tapbox_b.dart';
 import 'package:flutter_study/flutter_study/state/tapbox_c.dart';
+import 'package:flutter_study/life_cycle/life_cycle.dart';
 import 'package:flutter_study/sample/layout_test.dart';
 import 'package:flutter_study/scroll/ListViewWidget.dart';
 import 'package:flutter_study/widgets/Expanded/ExpandedWidget.dart';
@@ -40,6 +41,8 @@ class Main extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<Widget> list = [
+      // 生命周期测试
+      WidgetTest(),
       // Align对齐布局示例
       AlignLayout(),
       // StackStudy
