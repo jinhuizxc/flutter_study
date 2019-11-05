@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 
+/*
+ * GlobalKey学习
+ * https://segmentfault.com/a/1190000011276853
+ */
 class GlobalKeyPage extends StatelessWidget {
 
   @override
@@ -7,7 +11,7 @@ class GlobalKeyPage extends StatelessWidget {
     return new Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text('GlobalKey'),
+        title: Text('GlobalKey学习'),
         leading: BackButton(),
       ),
       body: Center(

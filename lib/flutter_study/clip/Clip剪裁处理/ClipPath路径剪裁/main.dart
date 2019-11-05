@@ -4,9 +4,7 @@ import 'package:flutter/material.dart';
 class ClipPathSample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'ClipPath路径剪裁示例',
-      home: Scaffold(
+    return Scaffold(
         appBar: AppBar(
           title: Text(
             'ClipPath路径剪裁示例',
@@ -23,7 +21,6 @@ class ClipPathSample extends StatelessWidget {
             ) ,
           ),
         ),
-      ),
     );
   }
 }

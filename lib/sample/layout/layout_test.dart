@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_study/sample/favorite.dart';
+import 'package:flutter_study/sample/layout/favorite.dart';
 
 /*
  * 在Flutter中构建布局

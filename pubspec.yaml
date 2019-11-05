@@ -80,6 +80,7 @@ dependencies:
 #  local_auth: ^0.5.2+3  # androidX
   local_auth: ^0.4.0+1
   get_it: ^1.0.3+2
+  font_awesome_flutter: ^8.0.1
 
 dev_dependencies:
   flutter_test:
@@ -159,6 +160,7 @@ flutter:
     - assets/images/7.jpeg
     - assets/images/8.jpeg
     - assets/images/9.jpeg
+    - assets/images/login_logo.png
 
   # To add assets to your application, add an assets section, like this:
   # assets:
@@ -179,6 +181,17 @@ flutter:
     - family: myfont
       fonts:
           - asset: fonts/myfont.ttf
+    - family: WorkSansSemiBold
+      fonts:
+        - asset: assets/fonts/Work_Sans/WorkSans-SemiBold.ttf
+    - family: WorkSansBold
+      fonts:
+        - asset: assets/fonts/Work_Sans/WorkSans-Bold.ttf
+    - family: WorkSansMedium
+      fonts:
+        - asset: assets/fonts/Work_Sans/WorkSans-Medium.ttf
+
+
   # example:
   # fonts:
   #   - family: Schyler

@@ -6,9 +6,7 @@ import 'package:flutter/material.dart';
 class ClipOvalSample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'ClipOval圆形剪裁示例',
-      home: Scaffold(
+    return Scaffold(
         appBar: AppBar(
           title: Text(
             'ClipOval圆形剪裁示例',
@@ -30,7 +28,6 @@ class ClipOvalSample extends StatelessWidget {
             ),
           ),
         ),
-      ),
     );
   }
 }

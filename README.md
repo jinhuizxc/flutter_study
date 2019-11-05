@@ -1,16 +1,33 @@
-# flutter_study
+# Flutter组件学习
+
 ## 环境搭建
 https://www.jianshu.com/p/35326ec8090f
 ## 开发文档
 https://flutter.cn/docs
-## Flutter->JSON解析
-https://segmentfault.com/a/1190000020134951
-## Flutter页面布局 Stack层叠组件 Stack与Align Stack与Positioned实现定位布局
-https://www.cnblogs.com/yiweiyihang/p/11451966.html
+
 ## Flutter Codelabs
 https://codelabs.flutter-io.cn/#codelabs
-## Flutter 常用工具类库common_utils
-http://www.imooc.com/article/details/id/253896
+
+### Flutter学习
+- [Flutter中的Key，LocalKey，GlobalKey...](https://segmentfault.com/a/1190000011276853)
+- [Flutter页面布局 Stack层叠组件 Stack与Align Stack与Positioned实现定位布局](https://www.cnblogs.com/yiweiyihang/p/11451966.html)
+- [Flutter->JSON解析](https://segmentfault.com/a/1190000020134951)
+- [Flutter（五）TextField](https://www.jianshu.com/p/f7b37f7fa2a0)
+- [Flutter（二十八）NotificationListener](https://www.jianshu.com/p/6dc3cca1d99a)
+- [SingleChildScrollView的使用](https://blog.csdn.net/weixin_43266090/article/details/94165846)
+- [flutter自定义View(CustomPainter) 之 canvas的方法总结](https://blog.csdn.net/u011272795/article/details/83828732)
+---
+### 参考项目/资料:
+- [Flutter之撸一个漂亮的登录界面的总结](https://www.jianshu.com/p/0c2ba709b95e)
+- [flutter-learing](https://github.com/LXD312569496/flutter-learing)
+- [Login page](https://github.com/huextrat/TheGorgeousLogin)
+- [Flutter常用工具类库common_utils](http://www.imooc.com/article/details/id/253896)
+- [Flutter pageview切换指示器](https://www.jianshu.com/p/c0fc4ab3e9c6)
+- [flutter开发----图标库的使用](https://blog.csdn.net/qq_35905501/article/details/90270010)
+---
+### 打包
+- [安卓客户端打包](https://www.jianshu.com/p/f91b4e84cec8)
+
 
 
 ---

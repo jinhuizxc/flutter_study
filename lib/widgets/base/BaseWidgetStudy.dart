@@ -6,7 +6,7 @@ import 'package:flutter_study/flutter_study/state/tapbox_a.dart';
 import 'package:flutter_study/flutter_study/state/tapbox_b.dart';
 import 'package:flutter_study/flutter_study/state/tapbox_c.dart';
 import 'package:flutter_study/life_cycle/life_cycle.dart';
-import 'package:flutter_study/sample/layout_test.dart';
+import 'package:flutter_study/sample/layout/layout_test.dart';
 import 'package:flutter_study/scroll/ListViewWidget.dart';
 import 'package:flutter_study/widgets/Expanded/ExpandedWidget.dart';
 import 'package:flutter_study/widgets/align/AlignLayout.dart';
