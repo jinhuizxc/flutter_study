@@ -15,17 +15,17 @@ class FingerTest extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(),
+      home: MyFingerPage(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
+class MyFingerPage extends StatefulWidget {
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _MyFingerPageState createState() => _MyFingerPageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _MyFingerPageState extends State<MyFingerPage> {
   final LocalAuthenticationService _localAuth = locator<LocalAuthenticationService>();
 
   @override

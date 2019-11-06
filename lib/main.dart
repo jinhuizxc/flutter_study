@@ -67,35 +67,36 @@ void main() {
 
 }
 
-class MyDeer extends StatelessWidget {
-  MyDeer() {
-    final router = Router();
-    Routes.configureRoutes(router);
-    Application.router = router;
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
-    return OKToast(
-        child: MaterialApp(
-          title: 'Flutter Deer',
-          //debugShowCheckedModeBanner: false,
-          theme: ThemeData(
-            primaryColor: Colours.app_main,
-            scaffoldBackgroundColor: Colors.white,
-          ),
-          home: SplashPage(),
-          onGenerateRoute: Application.router.generator,
-        ),
-        backgroundColor: Colors.black54,
-        textPadding:
-            const EdgeInsets.symmetric(horizontal: 16.0, vertical: 10.0),
-        radius: 20.0,
-        position: ToastPosition.bottom,
-        dismissOtherOnShow: true);
-  }
-}
+// MyDeer-App
+//class MyDeer extends StatelessWidget {
+//  MyDeer() {
+//    final router = Router();
+//    RoutesConstant.configureRoutes(router);
+//    Application.router = router;
+//  }
+//
+//  @override
+//  Widget build(BuildContext context) {
+//    // TODO: implement build
+//    return OKToast(
+//        child: MaterialApp(
+//          title: 'Flutter Deer',
+//          //debugShowCheckedModeBanner: false,
+//          theme: ThemeData(
+//            primaryColor: Colours.app_main,
+//            scaffoldBackgroundColor: Colors.white,
+//          ),
+//          home: SplashPage(),
+//          onGenerateRoute: Application.router.generator,
+//        ),
+//        backgroundColor: Colors.black54,
+//        textPadding:
+//            const EdgeInsets.symmetric(horizontal: 16.0, vertical: 10.0),
+//        radius: 20.0,
+//        position: ToastPosition.bottom,
+//        dismissOtherOnShow: true);
+//  }
+//}
 
 /*class MyStudyApp extends StatelessWidget {
 
