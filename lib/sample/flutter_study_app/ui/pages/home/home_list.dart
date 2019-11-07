@@ -51,6 +51,11 @@ class _HomeListState extends State<HomeList> {
                 '${RoutesConstant.flutterWebViewPage}?url=${Uri.encodeComponent("https://github.com/ChessLuo")}&title=flutter_webview',
                 transition: TransitionType.material);
           }),
+          _listItem(itemTitles[5], () {
+            //provider状态管理
+            Application.router.navigateTo(context, RoutesConstant.providerPage,
+                transition: TransitionType.cupertino);
+          }),
 
         ],
       ),

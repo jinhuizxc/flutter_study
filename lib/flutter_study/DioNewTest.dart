@@ -17,14 +17,12 @@ final ThemeData kIOSTheme = ThemeData(
 );
 
 final ThemeData kDefaultTheme = ThemeData(
-  primaryIconTheme: const IconThemeData(color: Colors.white),
-  primarySwatch: Colors.blueGrey,
-  primaryColor: Colors.blueGrey,
-  accentColor: Colors.orangeAccent,
-  fontFamily: 'HYQiHei-30F',
-  textTheme: TextTheme()
-);
-
+    primaryIconTheme: const IconThemeData(color: Colors.white),
+    primarySwatch: Colors.blueGrey,
+    primaryColor: Colors.blueGrey,
+    accentColor: Colors.orangeAccent,
+    fontFamily: 'HYQiHei-30F',
+    textTheme: TextTheme());
 
 class DioNewTest extends StatefulWidget {
   @override
@@ -42,7 +40,6 @@ class _DioNewTestState extends State<DioNewTest> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     _navigationItems = <BottomNavigationBarItem>[
       BottomNavigationBarItem(
@@ -54,26 +51,27 @@ class _DioNewTestState extends State<DioNewTest> {
     _pageList = <StatefulWidget>[HomePage(), MinePage()];
 
     _currentPage = _pageList[_currentIndex];
-
   }
 
   @override
   Widget build(BuildContext context) {
-    final BottomNavigationBar bottomNavBar =
-        BottomNavigationBar(items: _navigationItems,
-        currentIndex: _currentIndex,
-        type: BottomNavigationBarType.fixed,
-        // 点击事件
-        onTap: (index){
-          setState(() {
-            _currentIndex = index;
-            _currentPage = _pageList[_currentIndex];
-          });
-        },);
-
+    final BottomNavigationBar bottomNavBar = BottomNavigationBar(
+      items: _navigationItems,
+      currentIndex: _currentIndex,
+      type: BottomNavigationBarType.fixed,
+      // 点击事件
+      onTap: (index) {
+        setState(() {
+          _currentIndex = index;
+          _currentPage = _pageList[_currentIndex];
+        });
+      },
+    );
 
     return MaterialApp(
-      theme: defaultTargetPlatform == TargetPlatform.iOS ? kIOSTheme : kDefaultTheme,
+      theme: defaultTargetPlatform == TargetPlatform.iOS
+          ? kIOSTheme
+          : kDefaultTheme,
       home: Scaffold(
         appBar: AppBar(
           title: new Text(appBatTitle[_currentIndex]),

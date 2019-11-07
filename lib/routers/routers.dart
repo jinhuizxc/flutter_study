@@ -34,6 +34,7 @@ class RoutesConstant {
     router.define(webViewPlginPage, handler: webViewPluginHandler);
     router.define(flutterWebViewPage, handler: flutterWebViewHandler);
     router.define(eventBusPage, handler: eventBusHandler);
+    router.define(eventBusPage, handler: providerHandler);
 
   }
 }

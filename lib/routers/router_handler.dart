@@ -1,6 +1,7 @@
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_study/sample/flutter_study_app/event/eventbus_page.dart';
+import 'package:flutter_study/sample/flutter_study_app/ui/demo/eventbus_page.dart';
+import 'package:flutter_study/sample/flutter_study_app/ui/demo/provider_page.dart';
 import 'package:flutter_study/sample/flutter_study_app/ui/demo/webview_flutter.dart';
 import 'package:flutter_study/sample/flutter_study_app/ui/demo/flutter_webview_plugin.dart';
 import 'package:flutter_study/sample/flutter_study_app/ui/pages/home/home_page.dart';
@@ -29,7 +30,13 @@ var flutterWebViewHandler = Handler(
 
 // eventbus事件总线
 var eventBusHandler = Handler(
-handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
   return EventBusPage();
-}
-);
+});
+
+//provider状态管理
+var providerHandler = Handler(
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+      return ProviderDemoPage();
+    });
+

@@ -39,7 +39,7 @@ class Main extends StatelessWidget {
       // TextFieldWidget
       TextFieldWidget(),
       // BottomNavigationBarWidget学习
-      BottomNavigationBarWidget(),
+      BottomNavigationBarWidgetStudy(),
       // Flutter学习之制作底部菜单导航
       BottomNavigationBarWidgetSample(),
       // SnackBar轻量提示组件

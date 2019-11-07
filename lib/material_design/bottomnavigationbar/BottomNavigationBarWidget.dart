@@ -3,15 +3,15 @@ import 'package:flutter/material.dart';
 /*
  * BottomNavigationBarWidget学习
  */
-class BottomNavigationBarWidget extends StatelessWidget {
+class BottomNavigationBarWidgetStudy extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'BottomNavigationBarWidget组件',
-      home: Scaffold(
-        body: MyHomePage(),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('BottomNavigationBarWidget组件学习'),
       ),
-    );
+        body: MyHomePage(),
+      );
   }
 }
 
