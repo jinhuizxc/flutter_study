@@ -23,6 +23,8 @@ https://codelabs.flutter-io.cn/#codelabs
 - [Flutter - Drawer 抽屉视图与自定义header](https://www.jianshu.com/p/956bb41bb524)
 - [Flutter-实现图片圆角的几种方式](https://segmentfault.com/a/1190000019909822)
 - [Flutter Widgets,Components,Demos,Pages ](https://github.com/jiangkang/flutter-system)
+- [Flutter | 使用BottomNavigationBar快速构建底部导航](https://www.jianshu.com/p/e989405f64e2)
+- [flutter之从零开始搭建（一）之 BottomNavigationBar](https://juejin.im/post/5b3ee0b66fb9a04f8a21678c)
 ---
 ### 参考项目/资料:
 - [Flutter之撸一个漂亮的登录界面的总结](https://www.jianshu.com/p/0c2ba709b95e)

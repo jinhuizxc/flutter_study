@@ -18,7 +18,12 @@ class _ProviderDemoPageState extends State<ProviderDemoPage> {
       ),
       // provider绑定数据
       // TODO 首先创建底部widget;
-      body: BottomNavigationBarExample(),
+      body: HomePage(),
+      bottomNavigationBar: BottomNavigationBarExample(),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Icon(Icons.add),
+      ),
     );
   }
 }
@@ -32,27 +37,35 @@ class BottomNavigationBarExample extends StatefulWidget {
 
 class _BottomNavigationBarExampleState
     extends State<BottomNavigationBarExample> {
-  var tabTitles = ['首页', '商城', '我的'];
-  var tabIcons = [Icons.home, Icons.shopping_cart, Icons.person];
+
+//  var tabTitles = ['首页', '商城', '我的'];
+//  var tabIcons = [Icons.home, Icons.shopping_cart, Icons.person];
 
   // 当前下标
   var _currentIndex = 0;
 
   // 显示底部tab菜单
-  List<BottomNavigationBarItem> _tabItems = <BottomNavigationBarItem>[];
+  List<BottomNavigationBarItem> _tabItems = <BottomNavigationBarItem>[
+    BottomNavigationBarItem(title: Text('首页'), icon: Icon(Icons.home)),
+    BottomNavigationBarItem(title: Text('商城'), icon: Icon(Icons.shopping_cart)),
+    BottomNavigationBarItem(title: Text('我的'), icon: Icon(Icons.person)),
+  ];
 
   @override
   Widget build(BuildContext context) {
     return new BottomNavigationBar(
-        // 点击tab,根据下标切换页面
-        onTap: (index) {
-          setState(() {
-            _currentIndex = index;
-          });
-        },
-        currentIndex: _currentIndex,
-        items: _tabItems,
+      // 点击tab,根据下标切换页面
+      onTap: (index) {
+        setState(() {
+          _currentIndex = index;
+        });
+      },
+      currentIndex: _currentIndex,
+      items: _tabItems,
       type: BottomNavigationBarType.fixed,
+//      backgroundColor: Colors.black,  // 设置tab的背景颜色，type为fixed有效
+      fixedColor: Colors.blue,
+      unselectedItemColor: Colors.grey,
     );
   }
 }
