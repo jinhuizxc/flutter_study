@@ -34,12 +34,12 @@ class _HomeListState extends State<HomeList> {
             //sqflite数据库
             Application.router.navigateTo(context, RoutesConstant.sqflitePage,
                 transition: TransitionType.fadeIn);
-          }),
+          }),*/
           _listItem(itemTitles[1], () {
             //eventbus事件总线
             Application.router.navigateTo(context, RoutesConstant.eventBusPage,
                 transition: TransitionType.inFromRight);
-          }),*/
+          }),
           _listItem(itemTitles[3], (){
             Application.router.navigateTo(context,
                 '${RoutesConstant.webViewPlginPage}?url=${Uri.encodeComponent('https://github.com/ChessLuo')}&title=flutter_webview_plugin',

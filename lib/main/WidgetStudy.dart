@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_study/eventbus/EventBusPage.dart';
+import 'package:flutter_study/sample/flutter_study_app/event/eventbus_page.dart';
 import 'package:flutter_study/flutter_study/clip/clip_study.dart';
 import 'package:flutter_study/gesture/GestureStudy.dart';
 import 'package:flutter_study/material_design/MaterialDesignStudy.dart';

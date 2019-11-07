@@ -43,7 +43,7 @@ class _FlutterStudyAppState extends State<FlutterStudyApp> {
     _setThemeColor();
     // 订阅eventbus
     _colorSubscription = eventBus.on<ThemeColorEvent>().listen((event){
-      print("eventColor:" + event.colorStr);
+      print("eventColor:" + event.colorStr);  // eventColor: #568958
       // 缓存主题色
       _cacheColor(event.colorStr);
       Color color = AppColors.getColor(event.colorStr);
