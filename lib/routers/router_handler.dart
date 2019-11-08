@@ -2,6 +2,7 @@ import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_study/sample/flutter_study_app/ui/demo/eventbus_page.dart';
 import 'package:flutter_study/sample/flutter_study_app/ui/demo/provider_page.dart';
+import 'package:flutter_study/sample/flutter_study_app/ui/demo/sqflite.dart';
 import 'package:flutter_study/sample/flutter_study_app/ui/demo/webview_flutter.dart';
 import 'package:flutter_study/sample/flutter_study_app/ui/demo/flutter_webview_plugin.dart';
 import 'package:flutter_study/sample/flutter_study_app/ui/pages/home/home_page.dart';
@@ -37,6 +38,12 @@ var eventBusHandler = Handler(
 //provider状态管理
 var providerHandler = Handler(
     handlerFunc: (BuildContext context, Map<String, List<String>> params) {
-      return ProviderDemoPage();
-    });
+  return ProviderDemoPage();
+});
 
+// sqflite数据库
+var sqfliteHandler = Handler(
+  handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+    return SqflitePage();
+  },
+);

@@ -30,11 +30,11 @@ class _HomeListState extends State<HomeList> {
     return Container(
       child: ListView(
         children: <Widget>[
-         /* _listItem(itemTitles[0], () {
+          _listItem(itemTitles[0], () {
             //sqflite数据库
             Application.router.navigateTo(context, RoutesConstant.sqflitePage,
                 transition: TransitionType.fadeIn);
-          }),*/
+          }),
           _listItem(itemTitles[1], () {
             //eventbus事件总线
             Application.router.navigateTo(context, RoutesConstant.eventBusPage,

@@ -35,6 +35,7 @@ class RoutesConstant {
     router.define(flutterWebViewPage, handler: flutterWebViewHandler);
     router.define(eventBusPage, handler: eventBusHandler);
     router.define(providerPage, handler: providerHandler);
+    router.define(sqflitePage, handler: sqfliteHandler);
 
   }
 }
