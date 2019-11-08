@@ -4,7 +4,8 @@ import 'package:flutter_study/flutter_study/clip/clip_study.dart';
 import 'package:flutter_study/gesture/GestureStudy.dart';
 import 'package:flutter_study/material_design/MaterialDesignStudy.dart';
 import 'package:flutter_study/sample/flutter_sample.dart';
-import 'package:flutter_study/sample/flutter_study_app/MyApp.dart';
+import 'package:flutter_study/sample/flutter_study_app/flutter_study_app.dart';
+import 'package:flutter_study/sample/flutter_wxread/FlutterWxReadApp.dart';
 import 'package:flutter_study/widgets/base/BaseWidgetStudy.dart';
 
 /*
@@ -44,8 +45,8 @@ class Main extends StatelessWidget {
       FlutterSample(),
       // FlutterStudyApp
       FlutterStudyApp(),
-      // EventBusPage
-      EventBusPage(),
+      // 微信读书App
+      FlutterWxReadApp(),
     ];
 
     return Scaffold(

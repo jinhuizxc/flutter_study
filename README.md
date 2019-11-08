@@ -25,6 +25,7 @@ https://codelabs.flutter-io.cn/#codelabs
 - [Flutter Widgets,Components,Demos,Pages ](https://github.com/jiangkang/flutter-system)
 - [Flutter | 使用BottomNavigationBar快速构建底部导航](https://www.jianshu.com/p/e989405f64e2)
 - [flutter之从零开始搭建（一）之 BottomNavigationBar](https://juejin.im/post/5b3ee0b66fb9a04f8a21678c)
+- [Flutter基础（十三）Flutter与Android的相互通信](https://www.jianshu.com/p/41fbf562d6e1)
 ---
 ### 参考项目/资料:
 - [Flutter之撸一个漂亮的登录界面的总结](https://www.jianshu.com/p/0c2ba709b95e)
@@ -39,6 +40,7 @@ https://codelabs.flutter-io.cn/#codelabs
 - [Flutter ——状态管理 | StreamBuild](https://www.jianshu.com/p/846abf65cd9b)
 - [flutter学习demo，使用到了一些常用基本组件，WebView，Shared Preferences，EventBus，Dio网络请求，flukit UI组件库，Toast，permission_handler权限申请，cached_network_image网络图片缓存，image_gallery_saver图片存储等，
 使用FlutterJsonBeanFactory插件完成JsonBean的转化 ](https://github.com/joudev/flutter-all-blue)
+- [基于 Flutter 仿微信读书发现模块 ](https://github.com/wuchao226/flutter_beauty)
 ---
 ### 打包
 - [安卓客户端打包](https://www.jianshu.com/p/f91b4e84cec8)

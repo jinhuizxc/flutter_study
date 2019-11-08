@@ -26,7 +26,6 @@ class _TransitionPageState extends State<TransitionPage>
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     // vsync: this 需要with这个SingleTickerProviderStateMixin
     _animationController = new AnimationController(

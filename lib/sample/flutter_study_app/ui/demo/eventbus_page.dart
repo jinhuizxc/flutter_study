@@ -8,6 +8,7 @@ import 'package:fluttertoast/fluttertoast.dart';
  *
  * flutter基础-组件通信(父子、兄弟）
  * https://www.jianshu.com/p/25a85c02d586?tdsourcetag=s_pctim_aiomsg
+ *
  */
 
 class EventBusPage extends StatefulWidget {
