@@ -36,6 +36,7 @@ class RoutesConstant {
     router.define(eventBusPage, handler: eventBusHandler);
     router.define(providerPage, handler: providerHandler);
     router.define(sqflitePage, handler: sqfliteHandler);
+    router.define(urlLauncher, handler: urlLauncherHandler);
 
   }
 }

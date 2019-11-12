@@ -57,6 +57,13 @@ class _HomeListState extends State<HomeList> {
                 transition: TransitionType.cupertino);
           }),
 
+          _listItem(itemTitles[8], () {
+            //Flutter Channel
+            Application.router.navigateTo(context, RoutesConstant.urlLauncher,
+                transition: TransitionType.cupertino);
+          }),
+
+
         ],
       ),
     );

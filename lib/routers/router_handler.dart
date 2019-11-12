@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_study/sample/flutter_study_app/ui/demo/eventbus_page.dart';
 import 'package:flutter_study/sample/flutter_study_app/ui/demo/provider_page.dart';
 import 'package:flutter_study/sample/flutter_study_app/ui/demo/sqflite.dart';
+import 'package:flutter_study/sample/flutter_study_app/ui/demo/url_launch.dart';
 import 'package:flutter_study/sample/flutter_study_app/ui/demo/webview_flutter.dart';
 import 'package:flutter_study/sample/flutter_study_app/ui/demo/flutter_webview_plugin.dart';
 import 'package:flutter_study/sample/flutter_study_app/ui/pages/home/home_page.dart';
@@ -47,3 +48,9 @@ var sqfliteHandler = Handler(
     return SqflitePage();
   },
 );
+
+//url channel
+var urlLauncherHandler = Handler(
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+      return UrlLauncherDemo();
+    });
