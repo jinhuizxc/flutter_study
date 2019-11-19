@@ -173,6 +173,7 @@ flutter:
     - assets/images/9.jpeg
     - assets/images/login_logo.png
     - assets/images/logo-github.png
+    - assets/images/weixin.jpg
 
   # To add assets to your application, add an assets section, like this:
   # assets:
