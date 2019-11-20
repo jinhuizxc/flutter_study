@@ -28,6 +28,8 @@ https://codelabs.flutter-io.cn/#codelabs
 - [Flutter基础（十三）Flutter与Android的相互通信](https://www.jianshu.com/p/41fbf562d6e1)
 - [Flutter数据库Sqflite之增删改查](https://www.jianshu.com/p/6656d81333cf)
 - [Flutter之PopupMenuButton组件](https://www.jianshu.com/p/be7e3b373def)
+- [Flutter基础之Navigator传递参数（含todo list demo）](https://www.jianshu.com/p/1aaa04a57d94)
+- [Flutter-GridView使用总结](https://www.jianshu.com/p/6b6d2a892d4c)
 ---
 ### 参考项目/资料:
 - [Flutter之撸一个漂亮的登录界面的总结](https://www.jianshu.com/p/0c2ba709b95e)

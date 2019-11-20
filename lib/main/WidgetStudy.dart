@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_study/flutter_study/layout/layout.dart';
 import 'package:flutter_study/sample/flutter_study_app/ui/demo/eventbus_page.dart';
 import 'package:flutter_study/flutter_study/clip/clip_study.dart';
 import 'package:flutter_study/gesture/GestureStudy.dart';
@@ -37,6 +38,8 @@ class Main extends StatelessWidget {
       BaseWidgetStudy(),
       // MaterialDesign学习
       MaterialDesignStudy(),
+      // 页面布局
+      LayoutStudy(),
       // 手势组件
       GestureStudy(),
       // Clip剪裁处理

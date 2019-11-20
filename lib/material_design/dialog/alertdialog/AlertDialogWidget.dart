@@ -1,13 +1,30 @@
 import 'package:flutter/material.dart';
 
 /*
- * 对话框
+ * AlertDialog组件示例
+ *
+ * AlertDialog:
+ * const AlertDialog({
+    Key key,
+    this.title,    // 标题
+    this.titlePadding,
+    this.titleTextStyle,
+    this.content,
+    this.contentPadding = const EdgeInsets.fromLTRB(24.0, 20.0, 24.0, 24.0),
+    this.contentTextStyle,
+    this.actions,       // 对话框操作按钮
+    this.backgroundColor,
+    this.elevation,    // 设置阴影
+    this.semanticLabel,
+    this.shape,
+  }) : assert(contentPadding != null),
+       super(key: key);
+
  */
 class AlertDialogWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
+    return Scaffold(
         appBar: AppBar(
           title: Text('AlertDialog组件示例'),
         ),
@@ -41,7 +58,6 @@ class AlertDialogWidget extends StatelessWidget {
             ],
           ),
         ),
-      ),
     );
   }
 }

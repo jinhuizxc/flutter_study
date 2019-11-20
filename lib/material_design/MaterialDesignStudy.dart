@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_study/material_design/appbar/appbar.dart';
 import 'package:flutter_study/material_design/bottomnavigationbar/sample/BottomNavigationBarWidgetSample.dart';
 import 'package:flutter_study/material_design/dialog/alertdialog/AlertDialogWidget.dart';
 import 'package:flutter_study/material_design/dialog/alertdialog/SimpleDialogWidget.dart';
 import 'package:flutter_study/material_design/drawer/DrawerWidget.dart';
 import 'package:flutter_study/material_design/floatactionbutton/FloatingActionButtonWidget.dart';
+import 'package:flutter_study/material_design/material_app/material_app.dart';
 import 'package:flutter_study/material_design/popupmenu/PopupMenuButtonWidget.dart';
+import 'package:flutter_study/material_design/scaffold/scaffold.dart';
 import 'package:flutter_study/material_design/snackbar/SnackBarWidget.dart';
 import 'package:flutter_study/material_design/snackbar/SnackBarWidget1.dart';
 import 'package:flutter_study/material_design/tabbar/default_tabController.dart';
@@ -26,10 +29,12 @@ class Main extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<Widget> list = [
+      // AppBar应用按钮组件
+      AppBarWidget(),
+      // MaterialApp应用组件
+      MaterialAppWidget(),
       // Card布局示例
       CardWidget(),
-      // AlertDialog对话框组件
-      AlertDialogWidget(),
       // 抽屉组件
       DrawerWidget(),
       // 扁平按钮组件
@@ -40,8 +45,12 @@ class Main extends StatelessWidget {
       PopupMenuButtonWidget(),
       // DefaultTabController示例
       DefaultTabControllerSample(),
+      // Scaffold脚手架组件示例
+      ScaffoldWidget(),
       // TabBar水平选项卡及视图组件
       TabBarWidget(),
+      // AlertDialog对话框组件
+      AlertDialogWidget(),
       // SimpleDialog组件示例
       SimpleDialogWidget(),
       // TextFieldWidget
