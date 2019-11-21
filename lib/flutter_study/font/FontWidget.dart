@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 
-/*
- * 自定义字体
- */
-class FontWidget extends StatelessWidget {
+// 第九章资源和图片
+// 自定义字体
+class FontStudy extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
