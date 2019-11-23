@@ -13,6 +13,7 @@ import 'package:flutter_study/widgets/base/BaseWidgetStudy.dart';
 
 import 'http/HttpClientStudy.dart';
 import 'http/HttpStudy.dart';
+import 'http/dio/DioStudy.dart';
 import 'package/ThreePacWidget.dart';
 
 // 第2章Flutter基础知识
@@ -25,6 +26,8 @@ class BaseStudy extends StatelessWidget {
       // 使用第三方包示例
       ThreePacStudy(),
       HttpStudy(),
+      // dio请求
+      DioStudy(),
       // 发起HttpClient请求
       HttpClientStudy(),
 //      ThemeWidget(),
