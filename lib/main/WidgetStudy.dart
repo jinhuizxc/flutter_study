@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_study/flutter_study/base_study/BaseStudy.dart';
 import 'package:flutter_study/flutter_study/font/FontWidget.dart';
 import 'package:flutter_study/flutter_study/layout/layout.dart';
+import 'package:flutter_study/map/MapTest.dart';
 import 'package:flutter_study/sample/flutter_study_app/ui/demo/eventbus_page.dart';
 import 'package:flutter_study/flutter_study/clip/clip_study.dart';
 import 'package:flutter_study/gesture/GestureStudy.dart';
@@ -56,6 +57,8 @@ class Main extends StatelessWidget {
       FlutterStudyApp(),
       // 微信读书App
       FlutterWxReadApp(),
+      // Flutter高德地图
+      MapTest(),
     ];
 
     return Scaffold(
