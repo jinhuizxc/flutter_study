@@ -144,7 +144,7 @@ class _LocationGetState extends State<LocationGet> {
 
   // 检查权限
   void _checkPermission() async{
-    await Simple
+//    await Simple
   }
 
 }

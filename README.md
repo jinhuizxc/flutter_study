@@ -55,3 +55,4 @@ Flutter数据解析
 ## Flutter：问题收录
 - https://blog.csdn.net/u013066292/article/details/80527066
 - [Waiting for another flutter command to release the startup lock... 异常解决](https://blog.csdn.net/qq_26287435/article/details/89537153)
+- [D8：程序类型已存在：android.support.v4.media.M...](http://www.cocoachina.com/articles/68529)

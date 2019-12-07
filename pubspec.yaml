@@ -75,7 +75,9 @@ dependencies:
   # AMap location plugin for flutter.高德地图定位插件
   amap_location: ^0.2.0
   # https://dart-pub.mirrors.sjtug.sjtu.edu.cn/packages/simple_permissions#-installing-tab-
-  simple_permissions: ^0.1.9
+#  simple_permissions: ^0.1.9
+  # https://pub.dev/packages/permission_handler#-installing-tab-
+  permission_handler: ^4.0.0
   easy_alert: ^0.0.2
   # 指纹认证模块
 #  local_auth: ^0.5.2+3  # androidX
