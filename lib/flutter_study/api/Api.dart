@@ -1,4 +1,4 @@
-class Api{
+class ApiConstant{
 
   static const String BaseUrl = "https://www.wanandroid.com/";
 

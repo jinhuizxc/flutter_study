@@ -10,7 +10,7 @@ class NetUtil {
   static void get(String url, Function callBack,
       {Map<String, String> params, Function errorCallBack}) async {
     if (!url.startsWith('http')) {
-      url = Api.BaseUrl + url;
+      url = ApiConstant.BaseUrl + url;
     }
 
     // 组合GET请求的参数

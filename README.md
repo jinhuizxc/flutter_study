@@ -44,6 +44,7 @@ https://codelabs.flutter-io.cn/#codelabs
 - [flutter学习demo，使用到了一些常用基本组件，WebView，Shared Preferences，EventBus，Dio网络请求，flukit UI组件库，Toast，permission_handler权限申请，cached_network_image网络图片缓存，image_gallery_saver图片存储等，
 使用FlutterJsonBeanFactory插件完成JsonBean的转化 ](https://github.com/joudev/flutter-all-blue)
 - [基于 Flutter 仿微信读书发现模块 ](https://github.com/wuchao226/flutter_beauty)
+- [[玩Android] 客户端](https://github.com/iceCola7/flutter_wanandroid)
 ---
 Flutter数据解析
 - [Flutter->JSON解析](https://segmentfault.com/a/1190000020134951)

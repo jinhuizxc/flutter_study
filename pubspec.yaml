@@ -27,14 +27,12 @@ dependencies:
   cupertino_icons: ^0.1.2
   english_words: ^3.1.0  # 包含数千个最常用的英文单词以及一些实用功能.
   # Flutter 常用工具类库 https://github.com/Sky24n/flustars
-#  flustars: 0.2.5
-  # 轻量级的存储类
-  shared_preferences: "^0.4.2"
+  #flustars: 0.2.5
+  # 轻量级的存储类 https://pub.dartlang.org/packages/shared_preferences
+  shared_preferences: ^0.4.2
   groovin_material_icons: ^1.1.5
   # Toast插件 https://github.com/OpenFlutter/flutter_oktoast
   oktoast: ^2.1.8
-  # 网络库 https://github.com/flutterchina/dio
-  dio: ^2.1.7
   # 引入dio以及jsonAnnotation做数据解析使用
   json_annotation: ^2.4.0
   # https://github.com/ReactiveX/rxdart
@@ -87,18 +85,45 @@ dependencies:
   font_awesome_flutter: ^8.0.1
   #eventbus
   event_bus: ^1.1.0
-  # flutter_webview_plugin
+  # WebView插件  https://pub.flutter-io.cn/packages/flutter_webview_plugin
   flutter_webview_plugin: ^0.3.5
   #状态管理
   provider: ^3.0.0+1
-  #数据库
+  #数据库  https://pub.flutter-io.cn/packages/sqflite
   sqflite: ^1.1.5
   # http https://pub.dev/packages/http#-installing-tab-
   http: ^0.12.0+2
 
-
-
-
+  # wanandroid 学习
+  # 网络库 https://github.com/flutterchina/dio
+  dio: ^3.0.3
+  # Cookie https://github.com/flutterchina/dio/tree/master/plugins/cookie_manager
+  # dio_cookie_manager 1.0.0 which depends on dio ^3.0.0, dio ^3.0.0 is required.
+  dio_cookie_manager: 1.0.0
+  # https://github.com/duytq94/flutter-intro-slider
+  # intro_slider: ^2.2.6
+  # 轮播图 https://github.com/best-flutter/flutter_swiper
+  flutter_swiper: ^1.1.6
+  # 文件读写 https://pub.dev/packages/path_provider
+  path_provider: ^0.5.0+1
+  # https://github.com/tekartik/synchronized.dart
+  #synchronized: '>=0.1.0 <3.0.0'
+  # https://github.com/ReactiveX/rxdart
+  #rxdart: ^0.22.1
+  # share 分享
+  share: ^0.6.1+1
+  # 上拉加载和下拉刷新的组件 https://github.com/peng8350/flutter_pulltorefresh
+  pull_to_refresh: ^1.5.4
+  # 解析html标签 https://github.com/Sub6Resources/flutter_html
+  flutter_html: ^0.10.4
+  # Html Encoder/Decoder https://pub.dev/packages/html_unescape
+  html_unescape: ^1.0.1+3
+  # 文字、屏幕适配
+  flutter_screenutil: ^0.6.0
+  # 设备信息
+  device_info: ^0.4.0+1
+  # 包信息
+  package_info: ^0.4.0+3
 
 dev_dependencies:
   flutter_test:
@@ -182,6 +207,10 @@ flutter:
     - assets/images/logo-github.png
     - assets/images/weixin.jpg
     - assets/images/wudang.jpeg
+    # 加载页面图片资源
+    - assets/images/
+    - assets/images/2.0x/
+    - assets/images/3.0x/
 
   # To add assets to your application, add an assets section, like this:
   # assets:

@@ -31,7 +31,8 @@ class BaseApp extends StatelessWidget {
                   onPressed: () {
                     Navigator.of(_context)
                         .push(MaterialPageRoute(builder: (_context) {
-                      return new MyApp();
+//                      return new MyApp();  // 跳转myapp
+                      return null;
                     }));
                   },
                   child: Text(

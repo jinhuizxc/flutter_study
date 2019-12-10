@@ -8,8 +8,8 @@ Future request(url, {formData}) async {
   try {
     // 初始化dio
     Dio dio = new Dio();
-    dio.options.contentType =
-        ContentType.parse('application/x-www-form-urlencoded');
+    (dio.options.contentType =
+    ContentType.parse('application/x-www-form-urlencoded') as String) as RequestOptions;
 
     Response response;
     //发起POST请求 传入url及表单参数

@@ -10,6 +10,7 @@ import 'package:flutter_study/material_design/MaterialDesignStudy.dart';
 import 'package:flutter_study/sample/flutter_sample.dart';
 import 'package:flutter_study/sample/flutter_study_app/flutter_study_app.dart';
 import 'package:flutter_study/sample/flutter_wxread/FlutterWxReadApp.dart';
+import 'package:flutter_study/wanandroid/my_app.dart';
 import 'package:flutter_study/widgets/base/BaseWidgetStudy.dart';
 
 /*
@@ -59,6 +60,8 @@ class Main extends StatelessWidget {
       FlutterWxReadApp(),
       // Flutter高德地图
       MapTest(),
+      // wanandroid App 实战
+      WanAndroidApp(),
     ];
 
     return Scaffold(
