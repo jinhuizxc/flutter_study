@@ -29,6 +29,7 @@ class _SplashScreenState extends State<SplashScreen> {
     return Center(
       child: Stack(
         children: <Widget>[
+          // 外部容器
           Container(
             // 欢迎页面
             color: Theme.of(context).primaryColor,

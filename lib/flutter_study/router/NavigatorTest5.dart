@@ -9,11 +9,11 @@ class NavigatorTest5 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MainScreen();
+    return MainScreen1();
   }
 }
 
-class MainScreen extends StatelessWidget {
+class MainScreen1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

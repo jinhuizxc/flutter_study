@@ -29,6 +29,8 @@ https://codelabs.flutter-io.cn/#codelabs
 - [Flutter之PopupMenuButton组件](https://www.jianshu.com/p/be7e3b373def)
 - [Flutter基础之Navigator传递参数（含todo list demo）](https://www.jianshu.com/p/1aaa04a57d94)
 - [Flutter-GridView使用总结](https://www.jianshu.com/p/6b6d2a892d4c)
+- [页面保持状态AutomaticKeepAliveClientMixin](https://www.jianshu.com/p/3773a882ab0c)
+
 ---
 ### 参考项目/资料:
 - [Flutter之撸一个漂亮的登录界面的总结](https://www.jianshu.com/p/0c2ba709b95e)
@@ -57,3 +59,7 @@ Flutter数据解析
 - https://blog.csdn.net/u013066292/article/details/80527066
 - [Waiting for another flutter command to release the startup lock... 异常解决](https://blog.csdn.net/qq_26287435/article/details/89537153)
 - [D8：程序类型已存在：android.support.v4.media.M...](http://www.cocoachina.com/articles/68529)
+
+### 项目合集
+- [实时聊天APP](https://github.com/hekaiyou/talk_casually)
+- [淘电商APP](https://github.com/hekaiyou/jedi)
