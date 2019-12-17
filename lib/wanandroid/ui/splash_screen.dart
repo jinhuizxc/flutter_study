@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_study/flutter_study/router/NavigatorTest5.dart';
 import 'package:flutter_study/utils/utils.dart';
+import 'package:flutter_study/wanandroid/ui/main_screen.dart';
 
 ///  启动页面
 class SplashScreen extends StatefulWidget {
