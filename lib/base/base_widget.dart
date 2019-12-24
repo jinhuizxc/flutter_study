@@ -13,7 +13,7 @@ import 'package:flutter_study/scaffoldWidget/ScaffoldSample.dart';
 //        height: 48.0,
 //      ),
 //    );
-class BaseWidget extends StatelessWidget {
+abstract class BaseWidget1 extends StatelessWidget {
   BuildContext context;
 
   @override

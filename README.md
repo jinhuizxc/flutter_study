@@ -51,6 +51,7 @@ https://codelabs.flutter-io.cn/#codelabs
 ---
 Flutter数据解析
 - [Flutter->JSON解析](https://segmentfault.com/a/1190000020134951)
+- [JSON to Dart](https://javiercbk.github.io/json_to_dart/)
 ---
 ### 打包
 - [安卓客户端打包](https://www.jianshu.com/p/f91b4e84cec8)

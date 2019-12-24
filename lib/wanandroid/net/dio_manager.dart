@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:dio/adapter.dart';
 import 'package:dio/dio.dart';
-import 'package:flutter_study/wanandroid/data/api.dart';
+import 'package:flutter_study/wanandroid/data/api/api.dart';
 import 'package:path_provider/path_provider.dart';
 
 import 'interceptors/cookie_interceptor.dart';

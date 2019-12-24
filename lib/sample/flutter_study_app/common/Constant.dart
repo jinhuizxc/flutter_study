@@ -2,7 +2,7 @@
 /*
  * 常量类
  */
-class Constant {
+class ConstantUtil {
   static const String SQFLITE_ROUTE = "SqfliteRoute";
   static const String EVENTBUS_ROUTE = "EventBusRoute";
   static const String FILE_ZIP_ROUTE = "FileZipRoute";
