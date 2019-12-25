@@ -26,10 +26,10 @@ class CookieInterceptor extends Interceptor {
   }
 
   @override
-  Future onResponse(Response response) => _saveCookies(response);
+  Future onResponse(Response response) async => _saveCookies(response);
 
   @override
-  Future onError(DioError err) => _saveCookies(err.response);
+  Future onError(DioError err) async => _saveCookies(err.response);
 
   // 保存cookie
   _saveCookies(Response response) {
@@ -46,7 +46,7 @@ class CookieInterceptor extends Interceptor {
   }
 
   // 获取cookie
-  String getCookie(List<Cookie> cookies) {
+  static String getCookie(List<Cookie> cookies) {
     return cookies.map((cookie) => "${cookie.name}=${cookie.value}").join(';');
   }
 }

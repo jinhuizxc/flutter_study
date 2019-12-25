@@ -54,6 +54,7 @@ class _SplashScreenState extends State<SplashScreen> {
                     child: CircleAvatar(
                       backgroundColor: Colors.transparent,
                       backgroundImage: AssetImage(Utils.getImgPath('ic_launcher_news')),
+                      radius: 46.0,  // 设置圆角可以使图片变大
                     ),
                   ),
                 )

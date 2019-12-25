@@ -31,6 +31,9 @@ https://codelabs.flutter-io.cn/#codelabs
 - [Flutter-GridView使用总结](https://www.jianshu.com/p/6b6d2a892d4c)
 - [页面保持状态AutomaticKeepAliveClientMixin](https://www.jianshu.com/p/3773a882ab0c)
 - [Flutter-WillPopScope-双击返回与界面退出提示](https://www.jianshu.com/p/befe02d60944)
+- [Flutter FocusScope](https://www.jianshu.com/p/fa3f8af90f72)
+- [[Flutter]输入框获取焦点和失去焦点事件](https://www.jianshu.com/p/f9cd631bd267)
+- [Flutter笔记-深入分析GestureDetector](https://www.jianshu.com/p/dc4853c33562)
 
 ---
 ### 参考项目/资料:

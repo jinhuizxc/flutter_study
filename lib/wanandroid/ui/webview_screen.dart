@@ -78,7 +78,7 @@ class _WebViewScreenState extends State<WebViewScreen> {
               }),
           IconButton(
               icon: Icon(Icons.share, size: 20.0),
-              onPressed: () => Share.share('${widget.title}: ${widget.title}')),
+              onPressed: () => Share.share('${widget.title}: ${widget.url}')),
         ],
       ),
       withJavascript: true,

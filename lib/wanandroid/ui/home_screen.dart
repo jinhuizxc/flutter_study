@@ -17,6 +17,13 @@ import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 /// 首页
+/*
+ * 异常:
+ *
+ * TODO 因为在CookieInterceptor 拦截器的onresponse/onerror没有加async导致的问题
+ * TODO DioError [DioErrorType.DEFAULT]: NoSuchMethodError: The method 'then' was called on null.
+ *
+ */
 class HomeScreen extends BaseWidget {
   @override
   BaseWidgetState<BaseWidget> attachState() {
@@ -96,10 +103,10 @@ class HomeScreenState extends BaseWidgetState<HomeScreen> {
         onRefresh: getTopArticleList,
         onLoading: getMoreArticleList,
         child: ListView.builder(
-          itemCount: _articles.length + 1,
           itemBuilder: itemView,
           physics: new AlwaysScrollableScrollPhysics(),
           controller: _scrollController,
+          itemCount: _articles.length + 1,
         ),
       ),
       floatingActionButton: !_isShowFAB
@@ -110,7 +117,7 @@ class HomeScreenState extends BaseWidgetState<HomeScreen> {
               onPressed: () {
                 /// 回到顶部时要执行的动画
                 _scrollController.animateTo(0,
-                    duration: Duration(microseconds: 2000), curve: Curves.ease);
+                    duration: Duration(milliseconds: 2000), curve: Curves.ease);
               }),
     );
   }
@@ -126,7 +133,7 @@ class HomeScreenState extends BaseWidgetState<HomeScreen> {
     });
   }
 
-  void getTopArticleList() {
+  Future getTopArticleList() async {
     apiService.getTopArticleList((TopArticleModel topArticleModel) {
       if (topArticleModel.errorCode == Constants.STATUS_SUCCESS) {
         topArticleModel.data.forEach((value) {
