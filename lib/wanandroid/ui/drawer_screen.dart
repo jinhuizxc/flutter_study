@@ -5,13 +5,19 @@ import 'package:flutter_study/utils/utils.dart';
 import 'package:flutter_study/wanandroid/common/common.dart';
 import 'package:flutter_study/wanandroid/common/user.dart';
 import 'package:flutter_study/wanandroid/data/api/api_service.dart';
+import 'package:flutter_study/wanandroid/data/model/base_model.dart';
 import 'package:flutter_study/wanandroid/data/model/user_info_model.dart';
 import 'package:flutter_study/wanandroid/event/login_event.dart';
+import 'package:flutter_study/wanandroid/event/theme_change_event.dart';
 import 'package:flutter_study/wanandroid/res/styles.dart';
 import 'package:flutter_study/wanandroid/ui/collect_screen.dart';
 import 'package:flutter_study/wanandroid/ui/login_screen.dart';
+import 'package:flutter_study/wanandroid/ui/rank_screen.dart';
 import 'package:flutter_study/wanandroid/ui/score_screen.dart';
+import 'package:flutter_study/wanandroid/ui/setting_screen.dart';
 import 'package:flutter_study/wanandroid/utils/route_util.dart';
+import 'package:flutter_study/wanandroid/utils/sp_util.dart';
+import 'package:flutter_study/wanandroid/utils/theme_util.dart';
 import 'package:flutter_study/wanandroid/utils/toast_util.dart';
 
 /// 侧滑页面
@@ -63,12 +69,26 @@ class _DrawerScreenState extends State<DrawerScreen>
               color: Theme.of(context).primaryColor,
               child: Column(
                 children: <Widget>[
-                  Container(),
+                  Container(
+                    alignment: Alignment.centerRight,
+                    child: InkWell(
+                      child: Image.asset(
+                        Utils.getImgPath('ic_rank'),
+                        color: Colors.white,
+                        width: 20,
+                        height: 20,
+                      ),
+                      onTap: (){
+                        RouteUtil.push(context, RankScreen());
+                      },
+                    ),
+                  ),
                   CircleAvatar(
                     backgroundImage:
                         AssetImage(Utils.getImgPath('ic_default_avatar')),
                     radius: 40.0,
                   ),
+                  Gaps.vGap15,
                   InkWell(
                     child: Text(username,
                         style: TextStyle(fontSize: 20, color: Colors.white)),
@@ -78,7 +98,7 @@ class _DrawerScreenState extends State<DrawerScreen>
                       }
                     },
                   ),
-                  Gaps.vGap5,
+                  Gaps.vGap15,
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
@@ -158,29 +178,80 @@ class _DrawerScreenState extends State<DrawerScreen>
                 height: 24,
                 color: Theme.of(context).primaryColor,
               ),
-              onTap: (){
-                if(isLogin){
+              onTap: () {
+                if (isLogin) {
                   // TODO 跳转分享
 //                  RouteUtil.push(context, ShareScreen());
-                }else{
+                } else {
                   ToastUtil.show(msg: "请先登录~");
                   RouteUtil.push(context, LoginScreen());
                 }
               },
             ),
             ListTile(
-              title: Text('TODO'),
+              title: Text(
+                'TODO',
+                textAlign: TextAlign.left,
+                style: TextStyle(fontSize: 16),
+              ),
+              leading: Image.asset(
+                Utils.getImgPath('ic_todo'),
+                width: 24,
+                height: 24,
+                color: Theme.of(context).primaryColor,
+              ),
+              onTap: () {
+                if (isLogin) {
+                  ToastUtil.show(msg: "todo~");
+//                  RouteUtil.push(context, TodoScreen());
+                } else {
+                  ToastUtil.show(msg: "请先登录~");
+                  RouteUtil.push(context, LoginScreen());
+                }
+              },
             ),
             ListTile(
-              title: Text('夜间模式'),
+              title: Text(
+                '夜间模式',
+                textAlign: TextAlign.left,
+                style: TextStyle(fontSize: 16),
+              ),
+              leading: Icon(
+                Icons.brightness_2,
+                size: 24,
+                color: Theme.of(context).primaryColor,
+              ),
+              onTap: () {
+                setState(() {
+                  changeTheme();
+                });
+              },
             ),
             ListTile(
-              title: Text('系统设置'),
+              title: Text(
+                '系统设置',
+                textAlign: TextAlign.left,
+                style: TextStyle(fontSize: 16),
+              ),
+              leading: Icon(Icons.settings,
+                  size: 24, color: Theme.of(context).primaryColor),
+              onTap: () {
+                RouteUtil.push(context, SettingScreen());
+              },
             ),
             Offstage(
               offstage: !isLogin,
               child: ListTile(
-                title: Text('退出登录'),
+                title: Text(
+                  '退出登录',
+                  textAlign: TextAlign.left,
+                  style: TextStyle(fontSize: 16),
+                ),
+                leading: Icon(Icons.power_settings_new,
+                    size: 24, color: Theme.of(context).primaryColor),
+                onTap: () {
+                  _logout(context);
+                },
               ),
             )
           ],
@@ -195,7 +266,6 @@ class _DrawerScreenState extends State<DrawerScreen>
   }
 
   @override
-  // TODO: implement wantKeepAlive
   bool get wantKeepAlive => true;
 
   /// 获取用户信息
@@ -211,5 +281,50 @@ class _DrawerScreenState extends State<DrawerScreen>
     }, (DioError error) {
       print("获取用户信息失败: " + error.message);
     });
+  }
+
+  /// 改变主题
+  void changeTheme() {
+    ThemeUtils.dark = !ThemeUtils.dark;
+    SPUtil.putBool(Constants.DARK_KEY, ThemeUtils.dark);
+    Application.eventBus.fire(new ThemeChangeEvent());
+  }
+
+  void _logout(BuildContext context) {
+    showDialog(
+        context: context,
+        builder: (context) => new AlertDialog(
+              content: new Text('确定退出登录吗？'),
+              actions: <Widget>[
+                new FlatButton(
+                    onPressed: () => Navigator.of(context).pop(false),
+                    child:
+                        new Text('取消', style: TextStyle(color: Colors.cyan))),
+                new FlatButton(
+                    onPressed: () => {
+                          apiService.logout((BaseModel model) {
+                            Navigator.of(context).pop(true);
+                            if (model.errorCode == Constants.STATUS_SUCCESS) {
+                              // 清空用户信息
+                              User.singleton.clearUserInfo();
+                              setState(() {
+                                isLogin = false;
+                                username = '去登录';
+                                level = "--";
+                                rank = "--";
+                                myScore = '';
+                              });
+                              ToastUtil.show(msg: '已退出登录');
+                            } else {
+                              ToastUtil.show(msg: model.errorMsg);
+                            }
+                          }, (DioError error) {
+                            print(error.response);
+                          })
+                        },
+                    child:
+                        new Text('确定', style: TextStyle(color: Colors.cyan))),
+              ],
+            ));
   }
 }

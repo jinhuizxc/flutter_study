@@ -7,6 +7,7 @@ import 'package:flutter_study/wanandroid/data/api/api_service.dart';
 import 'package:flutter_study/wanandroid/data/model/collection_model.dart';
 import 'package:flutter_study/wanandroid/ui/base_widget.dart';
 import 'package:flutter_study/wanandroid/utils/toast_util.dart';
+import 'package:flutter_study/wanandroid/widgets/item_collect_list.dart';
 import 'package:flutter_study/wanandroid/widgets/refresh_footer.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
@@ -31,7 +32,7 @@ class CollectScreenState extends BaseWidgetState<CollectScreen> {
   int _page = 0;
 
   RefreshController _refreshController =
-  new RefreshController(initialRefresh: false);
+      new RefreshController(initialRefresh: false);
 
   @override
   AppBar attachAppBar() {
@@ -83,19 +84,38 @@ class CollectScreenState extends BaseWidgetState<CollectScreen> {
         onRefresh: getCollectionList,
         onLoading: getMoreCollectionList,
         controller: _refreshController,
-        child:
-        ListView.builder(itemCount: _collectList.length,
+        child: ListView.builder(
+          itemCount: _collectList.length,
           itemBuilder: _itemView,
           physics: new AlwaysScrollableScrollPhysics(),
           controller: _scrollController,
         ),
       ),
-      floatingActionButton: !_isShowFAB ? null : FloatingActionButton(
-          heroTag: 'collect', child: Icon(Icons.arrow_upward), onPressed: () {
-        /// 回到顶部时要执行的动画
-        _scrollController.animateTo(
-            0, duration: Duration(milliseconds: 2000), curve: Curves.ease);
-      }),
+      floatingActionButton: !_isShowFAB
+          ? null
+          : FloatingActionButton(
+              heroTag: 'collect',
+              child: Icon(Icons.arrow_upward),
+              onPressed: () {
+                /// 回到顶部时要执行的动画
+                _scrollController.animateTo(0,
+                    duration: Duration(milliseconds: 2000), curve: Curves.ease);
+              }),
+    );
+  }
+
+  // 对应的item项
+  Widget _itemView(BuildContext context, int index) {
+    CollectionBean item = _collectList[index];
+    return ItemCollectList(
+      item: item,
+      onCollectCallBack: (isCollect) {
+        if (isCollect) {
+          setState(() {
+            _collectList.removeAt(index); // 如果被收藏，移除该项
+          });
+        }
+      },
     );
   }
 
@@ -160,9 +180,4 @@ class CollectScreenState extends BaseWidgetState<CollectScreen> {
     _scrollController.dispose();
   }
 
-  // 对应的item项
-  Widget _itemView(BuildContext context, int index) {
-    CollectionBean item = _collectList[index];
-    return ItemCollectList
-  }
 }

@@ -1,4 +1,6 @@
 // 单例模式么！！！
+import 'package:dio/dio.dart';
+import 'package:flutter_study/wanandroid/data/model/user_model.dart';
 import 'package:flutter_study/wanandroid/utils/sp_util.dart';
 
 import 'common.dart';
@@ -31,8 +33,17 @@ class User {
     }
   }
 
+
+  // 保存登录的用户信息
+  void saveUserInfo(UserModel _userModel, Response response) async{
+    List<String> cookies = response.headers['set-cookie'];
+    cookies = cookies;
+    userName = _userModel.data.username;
+    saveInfo();
+  }
+
   /// 保存用户信息到本地
-  saveUserInfo() async {
+  saveInfo() async {
     SPUtil.putStringList(Constants.COOKIES_KEY, cookie);
     SPUtil.putString(Constants.USERNAME_KEY, userName);
   }

@@ -7,7 +7,9 @@ import 'package:flutter_study/wanandroid/data/model/article_model.dart';
 import 'package:flutter_study/wanandroid/data/model/banner_model.dart';
 import 'package:flutter_study/wanandroid/data/model/base_model.dart';
 import 'package:flutter_study/wanandroid/data/model/collection_model.dart';
+import 'package:flutter_study/wanandroid/data/model/rank_model.dart';
 import 'package:flutter_study/wanandroid/data/model/user_info_model.dart';
+import 'package:flutter_study/wanandroid/data/model/user_model.dart';
 import 'package:flutter_study/wanandroid/net/dio_manager.dart';
 
 /// ApiService
@@ -68,7 +70,7 @@ class ApiService {
   }
 
   /// 获取用户个人信息
-  void getUserInfo(Function callback, Function errorCallback) {
+  void getUserInfo(Function callback, Function errorCallback) async {
     dio.get(Api.USER_INFO).then((response) {
       callback(UserInfoModel.fromJson(response.data));
     }).catchError((e) {
@@ -77,11 +79,60 @@ class ApiService {
   }
 
   /// 获取收藏列表
-  void getCollectionList(Function callback, Function errorCallback, int _page) {
+  void getCollectionList(
+      Function callback, Function errorCallback, int _page) async {
     dio.get(Api.COLLECTION_LIST + '/$_page/json').then((response) {
       callback(CollectionModel.fromJson(response.data));
     }).catchError((e) {
       errorCallback(e);
     });
   }
+
+  /// 退出登录
+  void logout(Function callback, Function errorCallback) async {
+    dio.get(Api.USER_LOGOUT).then((response) {
+      callback(BaseModel.fromJson(response.data));
+    }).catchError((error) {
+      errorCallback(e);
+    });
+  }
+
+  /// 登录, FormData表单形式提交登录数据key-value数据形式
+  void login(Function callback, Function errorCallback, String _username,
+      String _password) async {
+    FormData formData =
+        new FormData.fromMap({'username': _username, 'password': _password});
+    dio.post(Api.USER_LOGIN, data: formData).then((response) {
+      callback(UserModel.fromJson(response.data), response);
+    }).catchError((error) {
+      errorCallback(error);
+    });
+  }
+
+  /// 注册
+  void register(Function callback, Function errorCallback, String _username,
+      String _password) async {
+    FormData formData = new FormData.fromMap({
+      'username': _username,
+      'password': _password,
+      'repassword': _password
+    });
+    dio.post(Api.USER_REGISTER, data: formData).then((response){
+      callback(UserModel.fromJson(response.data));
+    }).catchError((e){
+      errorCallback(e);
+    });
+  }
+
+  /// 获取积分排行榜列表
+  void getRankList(Function callback, Function errorCallback, int _page) async {
+    dio.get(Api.RANK_LIST + "/$_page/json").then((response) {
+      callback(RankModel.fromJson(response.data));
+    }).catchError((e) {
+      errorCallback(e);
+    });
+  }
+
+
+
 }

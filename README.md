@@ -8,7 +8,7 @@ https://flutter.cn/docs
 ## Flutter Codelabs
 https://codelabs.flutter-io.cn/#codelabs
 
-### Flutter学习
+### Flutter组件学习
 - [Flutter中的Key，LocalKey，GlobalKey...](https://segmentfault.com/a/1190000011276853)
 - [Flutter页面布局 Stack层叠组件 Stack与Align Stack与Positioned实现定位布局](https://www.cnblogs.com/yiweiyihang/p/11451966.html)
 - [Flutter（五）TextField](https://www.jianshu.com/p/f7b37f7fa2a0)
@@ -34,6 +34,9 @@ https://codelabs.flutter-io.cn/#codelabs
 - [Flutter FocusScope](https://www.jianshu.com/p/fa3f8af90f72)
 - [[Flutter]输入框获取焦点和失去焦点事件](https://www.jianshu.com/p/f9cd631bd267)
 - [Flutter笔记-深入分析GestureDetector](https://www.jianshu.com/p/dc4853c33562)
+- [Flutter之Offstage组件](https://www.jianshu.com/p/b877ee7b1748)
+- [Flutter ExpansionTile 二级菜单](https://flutterchina.club/catalog/samples/expansion-tile-sample/)
+- [Flutter 布局（九）- Flow、Table、Wrap详解](https://www.jianshu.com/p/83c16dd07c7a)
 
 ---
 ### 参考项目/资料:
