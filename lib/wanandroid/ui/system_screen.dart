@@ -1,18 +1,68 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_study/wanandroid/ui/base_widget.dart';
+import 'package:flutter_study/wanandroid/ui/knowledge_tree_screen.dart';
+import 'package:flutter_study/wanandroid/ui/navigator_screen.dart';
 
 /// 体系页面
-class SystemScreen extends StatefulWidget {
+class SystemScreen extends BaseWidget {
   @override
-  _SystemScreenState createState() => _SystemScreenState();
+  BaseWidgetState<BaseWidget> attachState() {
+    return _SystemScreenState();
+  }
 }
 
-class _SystemScreenState extends State<SystemScreen> {
+class _SystemScreenState extends BaseWidgetState<SystemScreen>
+    with TickerProviderStateMixin{
+
+  var _list = ["体系", "导航"];
+  TabController _tabController;
+
   @override
-  Widget build(BuildContext context) {
+  AppBar attachAppBar() {
+    return AppBar(title: Text(""));
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    setAppBarVisible(false);
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+
+    showContent();
+  }
+
+  @override
+  Widget attachContentWidget(BuildContext context) {
+    _tabController = new TabController(length: _list.length, vsync: this);
     return Scaffold(
-//      appBar: AppBar(
-//        title: Text('SystemScreen'),
-//      ),
+      body: Column(
+        children: <Widget>[
+          Container(
+            color: Theme.of(context).primaryColor,
+            height: 50,
+            child: TabBar(
+              indicatorColor: Colors.white,
+              labelStyle: TextStyle(fontSize: 16),
+              unselectedLabelStyle: TextStyle(fontSize: 16),
+              controller: _tabController,
+              isScrollable: false,
+              indicatorSize: TabBarIndicatorSize.tab,
+              tabs: _list.map((item) {
+                return Tab(text: item);
+              }).toList(),
+            ),
+          ),
+          Expanded(
+            child: TabBarView(
+                controller: _tabController,
+                children: [KnowledgeTreeScreen(), NavigationScreen()]),
+          )
+        ],
+      ),
     );
   }
 }

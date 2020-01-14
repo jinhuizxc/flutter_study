@@ -49,7 +49,7 @@ class BottomNavigationBarExample extends StatefulWidget {
 
 class _BottomNavigationBarExampleState
     extends State<BottomNavigationBarExample> {
-//  var tabTitles = ['首页', '商城', '我的'];
+  var tabTitles = ['首页', '商城', '我的'];
 //  var tabIcons = [Icons.home, Icons.shopping_cart, Icons.person];
 
   // 当前下标

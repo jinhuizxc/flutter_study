@@ -17,6 +17,7 @@ import 'common/common.dart';
 /// https://stackoverflow.com/questions/52962112/how-to-navigate-without-context-in-flutter-app
 final GlobalKey<NavigatorState> navigatorKey = new GlobalKey<NavigatorState>();
 
+/// # (useAndroidX：是否使用androidX的库，false时使用support库。 enableJetifier：是否让第三方库也自动使用androidX)
 void main() async {
   // TODO 因为添加了wanandroid项目的部分，所以这里的内容仅仅是供wanandroid app 调用, 后面根据学习调整
   /// 修改问题: Unhandled Exception: ServicesBinding.defaultBinaryMessenger was accessed before the binding was initialized

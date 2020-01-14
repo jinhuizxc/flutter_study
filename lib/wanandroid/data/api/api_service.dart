@@ -7,10 +7,19 @@ import 'package:flutter_study/wanandroid/data/model/article_model.dart';
 import 'package:flutter_study/wanandroid/data/model/banner_model.dart';
 import 'package:flutter_study/wanandroid/data/model/base_model.dart';
 import 'package:flutter_study/wanandroid/data/model/collection_model.dart';
+import 'package:flutter_study/wanandroid/data/model/knowledge_detail_model.dart';
+import 'package:flutter_study/wanandroid/data/model/knowledge_tree_model.dart';
+import 'package:flutter_study/wanandroid/data/model/navigation_model.dart';
+import 'package:flutter_study/wanandroid/data/model/project_article_model.dart';
+import 'package:flutter_study/wanandroid/data/model/project_tree_model.dart';
 import 'package:flutter_study/wanandroid/data/model/rank_model.dart';
+import 'package:flutter_study/wanandroid/data/model/share_model.dart';
+import 'package:flutter_study/wanandroid/data/model/todo_list_model.dart';
 import 'package:flutter_study/wanandroid/data/model/user_info_model.dart';
 import 'package:flutter_study/wanandroid/data/model/user_model.dart';
 import 'package:flutter_study/wanandroid/data/model/user_score_model.dart';
+import 'package:flutter_study/wanandroid/data/model/wx_article_model.dart';
+import 'package:flutter_study/wanandroid/data/model/wx_chapters_model.dart';
 import 'package:flutter_study/wanandroid/net/dio_manager.dart';
 
 /// ApiService
@@ -142,6 +151,180 @@ class ApiService {
       errorCallback(e);
     });
   }
+
+  /// 获取我的分享列表数据
+  void getShareList(
+      Function callback, Function errorCallback, int _page) async {
+    dio.get(Api.SHARE_LIST + "/$_page/json").then((response) {
+      callback(ShareModel.fromJson(response.data));
+    }).catchError((e) {
+      errorCallback(e);
+    });
+  }
+
+  /// 删除已分享的文章
+  void deleteShareArticle(
+      Function callback, Function errorCallback, int _id) async {
+    dio.post(Api.DELETE_SHARE_ARTICLE + "/$_id/json").then((response) {
+      callback(BaseModel.fromJson(response.data));
+    }).catchError((e) {
+      errorCallback(e);
+    });
+  }
+
+  /// 分享文章
+  void shareArticle(Function callback, Function errorCallback, params) async {
+    dio.post(Api.SHARE_ARTICLE_ADD, queryParameters: params).then((response) {
+      callback(BaseModel.fromJson(response.data));
+    }).catchError((e) {
+      errorCallback(e);
+    });
+  }
+
+  /// 获取广场列表数据
+  void getSquareList(
+      Function callback, Function errorCallback, int _page) async {
+    dio.get(Api.SQUARE_LIST + "/$_page/json").then((response) {
+      callback(ArticleModel.fromJson(response.data));
+    }).catchError((e) {
+      errorCallback(e);
+    });
+  }
+
+  /// 获取公众号名称
+  void getWXChaptersList(Function callback, Function errorCallback) async {
+    dio.get(Api.WX_CHAPTERS_LIST).then((response) {
+      callback(WXChaptersModel.fromJson(response.data));
+    }).catchError((e) {
+      errorCallback(e);
+    });
+  }
+
+  /// 获取公众号文章列表数据
+  void getWXArticleList(
+      Function callback, Function errorCallback, int _id, int _page) async {
+    dio.get(Api.WX_ARTICLE_LIST + "/$_id/$_page/json").then((response) {
+      callback(WXArticleModel.fromJson(response.data));
+    }).catchError((e) {
+      errorCallback(e);
+    });
+  }
+
+  /// 获取知识体系数据
+  void getKnowledgeTreeList(Function callback, Function errorCallback) async {
+    dio.get(Api.KNOWLEDGE_TREE_LIST).then((response) {
+      callback(KnowledgeTreeModel.fromJson(response.data));
+    }).catchError((e) {
+      errorCallback(e);
+    });
+  }
+
+  /// 获取知识体系详情数据
+  void getKnowledgeDetailList(
+      Function callback, Function errorCallback, int _page, int _id) async {
+    dio.get(Api.KNOWLEDGE_DETAIL_LIST + "/$_page/json?cid=$_id")
+        .then((response) {
+      callback(KnowledgeDetailModel.fromJson(response.data));
+    }).catchError((e) {
+      errorCallback(e);
+    });
+  }
+
+  /// 获取导航列表数据
+  void getNavigationList(Function callback, Function errorCallback) async {
+    dio.get(Api.NAVIGATION_LIST).then((response) {
+      callback(NavigationModel.fromJson(response.data));
+    }).catchError((e) {
+      errorCallback(e);
+    });
+  }
+
+  /// 获取项目分类列表数据
+  void getProjectTreeList(Function callback, Function errorCallback) async {
+    dio.get(Api.PROJECT_TREE_LIST).then((response) {
+      callback(ProjectTreeModel.fromJson(response.data));
+    }).catchError((e) {
+      errorCallback(e);
+    });
+  }
+
+  /// 获取项目文章列表数据
+  void getProjectArticleList(
+      Function callback, Function errorCallback, int _id, int _page) async {
+    dio.get(Api.PROJECT_ARTICLE_LIST + "/$_page/json?cid=$_id")
+        .then((response) {
+      callback(ProjectArticleListModel.fromJson(response.data));
+    }).catchError((e) {
+      errorCallback(e);
+    });
+  }
+
+  /// 获取未完成TODO列表
+  void getNoTodoList(
+      Function callback, Function errorCallback, int _type, int _page) async {
+    dio.post(Api.NO_TODO_LIST + "/$_type/json/$_page").then((response) {
+      callback(TodoListModel.fromJson(response.data));
+    }).catchError((e) {
+      errorCallback(e);
+    });
+  }
+
+  /// 获取已完成TODO列表
+  void getDoneTodoList(
+      Function callback, Function errorCallback, int _type, int _page) async {
+    dio.post(Api.DONE_TODO_LIST + "/$_type/json/$_page").then((response) {
+      callback(TodoListModel.fromJson(response.data));
+    }).catchError((e) {
+      errorCallback(e);
+    });
+  }
+
+  /// 新增一个TODO
+  void addTodo(Function callback, Function errorCallback, params) async {
+    dio.post(Api.ADD_TODO, queryParameters: params).then((response) {
+      callback(BaseModel.fromJson(response.data));
+    }).catchError((e) {
+      errorCallback(e);
+    });
+  }
+
+  /// 根据ID更新TODO
+  void updateTodo(
+      Function callback, Function errorCallback, int _id, params) async {
+    dio.post(Api.UPDATE_TODO + "/$_id/json", queryParameters: params)
+        .then((response) {
+      callback(BaseModel.fromJson(response.data));
+    }).catchError((e) {
+      errorCallback(e);
+    });
+  }
+
+  /// 仅更新完成状态Todo
+  void updateTodoState(
+      Function callback, Function errorCallback, int _id, params) async {
+    dio.post(Api.UPDATE_TODO_STATE + "/$_id/json", queryParameters: params)
+        .then((response) {
+      callback(BaseModel.fromJson(response.data));
+    }).catchError((e) {
+      errorCallback(e);
+    });
+  }
+
+  /// 根据ID删除TODO
+  void deleteTodoById(
+      Function callback, Function errorCallback, int _id) async {
+    dio.post(Api.DELETE_TODO_BY_ID + "/$_id/json").then((response) {
+      callback(BaseModel.fromJson(response.data));
+    }).catchError((e) {
+      errorCallback(e);
+    });
+  }
+
+
+
+
+
+
 
 
 

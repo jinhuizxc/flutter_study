@@ -11,7 +11,7 @@ import 'package:flutter_study/wanandroid/widgets/item_collect_list.dart';
 import 'package:flutter_study/wanandroid/widgets/refresh_footer.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
-/// 收藏页面
+/// 我的收藏页面
 class CollectScreen extends BaseWidget {
   @override
   BaseWidgetState<BaseWidget> attachState() {

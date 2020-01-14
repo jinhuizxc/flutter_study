@@ -15,6 +15,8 @@ import 'package:flutter_study/wanandroid/ui/login_screen.dart';
 import 'package:flutter_study/wanandroid/ui/rank_screen.dart';
 import 'package:flutter_study/wanandroid/ui/score_screen.dart';
 import 'package:flutter_study/wanandroid/ui/setting_screen.dart';
+import 'package:flutter_study/wanandroid/ui/share_screen.dart';
+import 'package:flutter_study/wanandroid/ui/todo_screen.dart';
 import 'package:flutter_study/wanandroid/utils/route_util.dart';
 import 'package:flutter_study/wanandroid/utils/sp_util.dart';
 import 'package:flutter_study/wanandroid/utils/theme_util.dart';
@@ -181,7 +183,7 @@ class _DrawerScreenState extends State<DrawerScreen>
               onTap: () {
                 if (isLogin) {
                   // TODO 跳转分享
-//                  RouteUtil.push(context, ShareScreen());
+                  RouteUtil.push(context, ShareScreen());
                 } else {
                   ToastUtil.show(msg: "请先登录~");
                   RouteUtil.push(context, LoginScreen());
@@ -202,8 +204,8 @@ class _DrawerScreenState extends State<DrawerScreen>
               ),
               onTap: () {
                 if (isLogin) {
-                  ToastUtil.show(msg: "todo~");
-//                  RouteUtil.push(context, TodoScreen());
+//                  ToastUtil.show(msg: "todo~");
+                  RouteUtil.push(context, TodoScreen());
                 } else {
                   ToastUtil.show(msg: "请先登录~");
                   RouteUtil.push(context, LoginScreen());

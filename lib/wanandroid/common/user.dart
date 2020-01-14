@@ -37,7 +37,7 @@ class User {
   // 保存登录的用户信息
   void saveUserInfo(UserModel _userModel, Response response) async{
     List<String> cookies = response.headers['set-cookie'];
-    cookies = cookies;
+    cookie = cookies;
     userName = _userModel.data.username;
     saveInfo();
   }
